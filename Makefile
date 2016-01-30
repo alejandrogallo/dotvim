@@ -1,26 +1,11 @@
 
-# # ############################################################################
-#   All installs plugins locally and copies the repo .vimrc to the local one  # 
-# ############################################################################# 
-
-
 all: install-plugins update-local-vimrc 
-
-clean:
-	-rm *.pyc
-
-update-local-vimrc:
-	./src/update-local-vimrc.sh
 
 profile-vim:
 	vim --cmd "profile start vimrc.profile" --cmd "profile! file ./files/.vimrc"
 
-update-repo-vimrc:
-	./src/update-from-local-vimrc.sh
-
 install-plugins:
 	./src/install-plugins.sh
-
 
 install-new-plugins:
 	./src/update-local-vimrc.sh
@@ -52,5 +37,3 @@ update-snippets:
 		git pull; \
 	fi
 	cd -
-		
-		
