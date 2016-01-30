@@ -1,5 +1,5 @@
 
-init: link-vimrc install-plugins
+init: link-vimrc install-plugins update-submodules
 
 install-plugins:
 	./bin/install-plugins.sh
@@ -15,6 +15,8 @@ reset-all: purge-local all
 
 update-plugins:
 	vim +PluginUpdate
+update-submodules:
+	git submodule update
 
 link-vimrc:
 	./bin/link-vimrc.sh
