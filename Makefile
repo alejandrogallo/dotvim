@@ -17,7 +17,7 @@ update-plugins:
 	vim +PluginUpdate
 
 link-vimrc:
-	./bin/list-plugins.sh
+	./bin/link-vimrc.sh
 
 push-changes:
 	git commit -am "Normal update"
