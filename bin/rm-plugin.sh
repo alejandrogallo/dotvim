@@ -15,11 +15,10 @@ if test -d $plugin_folder
 then
   echo "Removing folder $plugin_folder"
   rm -rf $plugin_folder || exit 1
-  echo "Removing Plugin from $VIMRC"
-  sed "/$plug_name/d" $VIMRC || exit 1
 else
-  echo "$plugin_folder not found, maybe you have the plugin somewhere else"
-  exit 1
+  echo -e "\033[1;93m Folder $plugin_folder not found, maybe you have the plugin somewhere else \033[0m"
 fi
 
+echo -e "removing plugin from $vimrc"
+sed "/$plug_name/d" $VIMRC || exit 1
 

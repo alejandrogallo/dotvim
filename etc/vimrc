@@ -12,7 +12,6 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'alejandrogallo/vasp.vim'
 Plugin 'dhruvasagar/vim-table-mode'
 if has("lua")
   " it needs lua!

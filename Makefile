@@ -1,28 +1,23 @@
 
-all: install-plugins update-local-vimrc 
-
-profile-vim:
-	vim --cmd "profile start vimrc.profile" --cmd "profile! file ./files/.vimrc"
+init: link-vimrc install-plugins
 
 install-plugins:
-	./src/install-plugins.sh
-
-install-new-plugins:
-	./src/update-local-vimrc.sh
-	./src/install-plugins.sh
-	./src/update-from-local-vimrc.sh
+	./bin/install-plugins.sh
 
 purge-local:
 	rm -rf ~/.vim/bundle/*
 	echo "" > ~/.vimrc
 
 list:
-	./src/list-plugins.sh
+	./bin/list-plugins.sh
 
 reset-all: purge-local all
 
 update-plugins:
 	vim +PluginUpdate
+
+link-vimrc:
+	./bin/list-plugins.sh
 
 push-changes:
 	git commit -am "Normal update"
@@ -37,3 +32,7 @@ update-snippets:
 		git pull; \
 	fi
 	cd -
+
+profile-vim:
+	vim --cmd "profile start vimrc.profile" --cmd "profile! file ./files/.vimrc"
+
