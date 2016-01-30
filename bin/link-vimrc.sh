@@ -14,6 +14,6 @@ if test -e $VIMRC; then
   fi
 fi
 
-echo "Linking $VIMRC to $MYVIMRC"
+echo -e "\033[0;106mLinking\033[0m $VIMRC to $MYVIMRC"
 ln -s $MYVIMRC $VIMRC
 
