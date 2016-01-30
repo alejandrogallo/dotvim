@@ -71,7 +71,7 @@ check_for_plugin_in_vimrc(){
     echo -e "Plugin information found in $VIMRC file"
   else
     echo -e " \033[4;31mError:: Plugin information for $link not found in $VIMRC file... Add it, I could do it myself but I decided it was not a good idea...\033[0m "
-    echo -e "\t\t\t Just add \033[0;96m$plug_name\033[0m to your .vimrc"
+    echo -e "\t\t\t Just add \033[0;96mPlugin '$plug_name'\033[0m to your .vimrc"
     exit 1
   fi 
 }

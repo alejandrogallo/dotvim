@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/gnuplot.vim'
+Plugin 'alejandrogallo/vasp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
