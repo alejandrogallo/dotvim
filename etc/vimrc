@@ -85,8 +85,6 @@ set listchars+=tab:>\
 " Activate listchars
 set list
 
-"edit vimrc
-nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
 
 
 """"""""""""""""""""""
@@ -113,6 +111,8 @@ nnoremap <localleader>r :%s/
 "Toggle NERDTree file structure easily
 noremap <localleader>ne :NERDTreeToggle<cr>
 
+"edit vimrc
+nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
 
 
 
