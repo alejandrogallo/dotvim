@@ -1,4 +1,0 @@
-[submodule "UltiSnips"]
-	path = UltiSnips
-	url = https://github.com/alejandrogallo/vim-snippets.git
-	branch = master
