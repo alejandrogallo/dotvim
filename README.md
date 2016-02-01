@@ -19,9 +19,10 @@ I use the package manager [Vundle.vim](https://github.com/VundleVim/Vundle.vim) 
 
 You clone it or fork it by doing
 
-{% codeblock %}
+```bash
 git clone https://github.com/alejandrogallo/dotvim.git ~/.vim
-{% endcodeblock %}
+```
+
 
 make sure to backup your *.vim* directory and your *.vimrc* file first.
 

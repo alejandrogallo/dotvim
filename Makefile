@@ -1,5 +1,5 @@
 
-init: link-vimrc install-plugins update-submodules
+init: link-vimrc install-plugins init-submodules update-submodules
 
 install-plugins:
 	./bin/install-plugins.sh
@@ -17,6 +17,8 @@ update-plugins:
 	vim +PluginUpdate
 update-submodules:
 	git submodule update
+init-submodules:
+	git submodule init
 
 link-vimrc:
 	./bin/link-vimrc.sh
