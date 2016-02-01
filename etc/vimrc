@@ -85,7 +85,8 @@ set listchars+=tab:>\
 " Activate listchars
 set list
 
-
+"edit vimrc
+nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
 
 
 """"""""""""""""""""""
