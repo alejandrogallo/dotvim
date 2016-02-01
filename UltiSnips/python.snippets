@@ -9,15 +9,15 @@ $0
 parser.add_argument("-v", "--verbose", help="Make the output verbose", action="store_true")
 parser.add_argument("-f", help="Input file.", action="store")
 
-def vprint(arg1):
-		"""
-		Verbose print
-		"""
-		if VERBOSE:
-				print(arg1)
+def printv(arg1):
+    """
+    Verbose print
+    """
+    if VERBOSE:
+        print(arg1)
 
 if __name__=="__main__" :
-		# Parse arguments
+    # Parse arguments
     args = parser.parse_args()
 
     if args.verbose:
