@@ -1,3 +1,7 @@
+snippet bang "#!" b
+#! /usr/bin/env asy
+endsnippet
+
 snippet unitsize "Set unit size" b
 unitsize(${1:1cm});$0
 endsnippet
@@ -10,8 +14,8 @@ snippet label "Simple label" b
 label("${1:text}", ${2:Point}, ${3:SW});$0
 endsnippet
 
-snippet box "simple box" b
-box( ${1:Position Point}, ${2:(xlength, ylength)});$0
+snippet square "simple square" i
+box(${1:Position Point}, ${2:(xlength, ylength)});$0
 endsnippet
 
 snippet ife "If else" b
@@ -28,10 +32,6 @@ for ( int ${1:i} = ${2:0}; $1 ${3:<} ${4:len}; ${5:$1++} ) {
 }
 endsnippet
 
-snippet list "Define list/array" b
-${1:int}[] ${2:array}={${3:el1,el2,...}};$0
-endsnippet
-
 snippet forin "For k in array" b
 for ( ${1:int} ${2:k} : ${3:array} ) {
   ${4://statement}
@@ -42,10 +42,18 @@ snippet stdout "Stdout print" b
 write(${1:"${2:message}"});$0
 endsnippet
 
+snippet draw "Draw something" b
+draw(${1:path});$0
+endsnippet
+
 
 ##########################
 #  Usual variable types  #
 ##########################
+
+snippet list "Define list/array" b
+${1:int}[] ${2:array}={${3:el1,el2,...}};$0
+endsnippet
 
 snippet int "Integer define" b
 int ${1:name} ${2:= ${3:value}};$0
@@ -55,11 +63,9 @@ snippet string "String define" b
 string ${1:name} ${2:= ${3:value}};$0
 endsnippet
 
-
 snippet float "Real number define" b
 real ${1:name} ${2:= ${3:value}};$0
 endsnippet
-
 
 snippet point "2D point define (or complex number)" b
 pair ${1:z} ${2:= ${3:(x,y)}};$0
