@@ -180,18 +180,23 @@ set shiftwidth=2
 set softtabstop=2
 
 "Set tab to 4
-:nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 
 "Set tab to 8 with insertmode tab to 4
-:nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
+nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
 
 "Some other common configuration
-:nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
+nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 
 "Set tab to 2
-:nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
+nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
-
+function! CreateRsTTitle()
+  "This function creates a header of the rst type
+  "We use execute because then we can write Esc inside the command
+  execute "normal! yypVr=o\<ESC>"
+endf
+nnoremap <localleader>= :call CreateRsTTitle()<cr>
 
 
 
