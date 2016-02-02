@@ -191,12 +191,14 @@ nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 "Set tab to 2
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
-function! CreateRsTTitle()
+function! CreateRsTTitle(character)
   "This function creates a header of the rst type
   "We use execute because then we can write Esc inside the command
-  execute "normal! yypVr=o\<ESC>"
-endf
-nnoremap <localleader>= :call CreateRsTTitle()<cr>
+  execute "normal! yypVr".a:character."o\<ESC>"
+endfunction
+nnoremap <localleader>t= :call CreateRsTTitle("=")<cr>
+nnoremap <localleader>t- :call CreateRsTTitle("-")<cr>
+nnoremap <localleader>t~ :call CreateRsTTitle("~")<cr>
 
 
 
