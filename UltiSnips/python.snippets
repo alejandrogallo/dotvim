@@ -35,3 +35,9 @@ endsnippet
 snippet printv "Stdout function in python" b
 printv(${1:"${2:text}"})$0
 endsnippet
+
+
+snippet readlines "Read line by line of a file descriptro" b
+for ${1:line} in ${2:file_descriptor}:
+    ${3:pass}
+endsnippet
