@@ -349,6 +349,17 @@ if test -z "$PLUGIN_INSTALLED"; then
   install_with_vundle
 fi
 
+##############
+#  VASP.VIM  #
+##############
+
+folder_name="vim-asymptote"
+plug_name="alejandrogallo/vim-asymptote"
+begin_install
+if test -z "$PLUGIN_INSTALLED"; then
+  check_for_plugin_in_vimrc
+  install_with_vundle
+fi
 
 ################
 ##  COMMAND T  #
