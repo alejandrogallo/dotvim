@@ -471,3 +471,17 @@ if test -z "$PLUGIN_INSTALLED"; then
   check_for_plugin_in_vimrc
   install_with_vundle
 fi
+
+
+
+############
+#  tagbar  #
+############
+
+folder_name="tagbar"
+plug_name="majutsushi/tagbar"
+begin_install
+if test -z "$PLUGIN_INSTALLED"; then
+  check_for_plugin_in_vimrc
+  install_with_vundle
+fi
