@@ -113,6 +113,9 @@ nnoremap <localleader>r :%s/
 "Toggle NERDTree file structure easily
 noremap <localleader>ne :NERDTreeToggle<cr>
 
+" Toggle Tagbar 
+noremap <localleader>tg :TagbarToggle<cr>
+
 "edit vimrc
 nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
 
