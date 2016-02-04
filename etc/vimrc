@@ -232,6 +232,8 @@ if &term ==# "xterm"
   " to xterm, I have problems with colors, so I try to 
   " force 256 colors and not only 8
   let &term = "xterm-256color"
+elseif &term ==# "screen"
+  let &t_Co = 256
 endif
 
 
