@@ -119,6 +119,8 @@ noremap <localleader>tg :TagbarToggle<cr>
 "edit vimrc
 nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
 
+" align stuff for =
+vnoremap <localleader>t :Tabularize /
 
 
 
