@@ -24,21 +24,21 @@ endsnippet
 
 snippet ife "If else" b
 if ( ${1:Condition} ) {
-  ${2://statement}
+	${2://statement}
 } else {
-  ${3://statement}
+	${3://statement}
 }
 endsnippet
 
 snippet fori "For int i" b
 for ( int ${1:i} = ${2:0}; $1 ${3:<} ${4:len}; ${5:$1+=1} ) {
-  ${6://statement}
+	${6://statement}
 }
 endsnippet
 
 snippet forin "For k in array" b
 for ( ${1:int} ${2:k} : ${3:array} ) {
-  ${4://statement}
+	${4://statement}
 }
 endsnippet
 
@@ -50,10 +50,18 @@ snippet draw "Draw something" b
 draw(${1:path});$0
 endsnippet
 
+snippet fdraw "Draw with filling" b
+filldraw(${1:path}, ${2:color});$0
+endsnippet
 
 ##########################
 #  Usual variable types  #
 ##########################
+snippet struct "Define struct" b
+struct ${1:var_name} {
+	${2:var_type} ${3:var_name}$0;
+}
+endsnippet
 
 snippet list "Define list/array" b
 ${1:int}[] ${2:array}={${3:el1,el2,...}};$0
