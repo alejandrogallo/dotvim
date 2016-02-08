@@ -1,3 +1,4 @@
+CONFIGURATION_FILES=vimrc tmux.conf
 
 init: link-vimrc install-plugins init-submodules update-submodules
 
@@ -11,6 +12,9 @@ purge-local:
 list:
 	./bin/list-plugins.sh
 
+link-config-files:
+	./bin/link.sh $(CONFIGURATION_FILES)
+
 reset-all: purge-local all
 
 update-plugins:
@@ -19,9 +23,6 @@ update-submodules:
 	git submodule update
 init-submodules:
 	git submodule init
-
-link-vimrc:
-	./bin/link-vimrc.sh
 
 push-changes:
 	git commit -am "Normal update"
