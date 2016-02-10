@@ -1,3 +1,7 @@
+##################
+#  ARGS PARSING  #
+##################
+
 snippet argsparse "Parse arguments" b
 ############################
 #  COMMAND LINE INTERFACE  #
@@ -10,23 +14,43 @@ parser.add_argument("-v", "--verbose", help="Make the output verbose", action="s
 parser.add_argument("-f", help="Input file.", action="store")
 
 def printv(arg1):
-    """
-    Verbose print
-    """
-    if VERBOSE:
-        print(arg1)
+	"""
+	Verbose print
+	"""
+	if VERBOSE:
+		print(arg1)
 
 if __name__=="__main__" :
-    # Parse arguments
-    args = parser.parse_args()
+	# Parse arguments
+	args = parser.parse_args()
 
-    if args.verbose:
-        print("Making the command verbose...")
-        VERBOSE=True
-    else:
-        VERBOSE=False
+	if args.verbose:
+		print("Making the command verbose...")
+		VERBOSE=True
+	else:
+		VERBOSE=False
 endsnippet
 
+snippet subparser "Add a subparser to your cli" b
+SUBPARSER_HELP="For further information for every command, type in '${1:your_progamn_name} <command> -h'"
+subparsers = parser.add_subparsers(help=SUBPARSER_HELP, metavar="command", dest="command")
+
+${2:command}_parser = subparsers.add_parser("${3:$2}", help="${4:Do $2}")
+
+$2_parser.add_argument("-f", help="Input file.", action="store")
+endsnippet
+
+snippet arg-verbose "Add verbose to parser" b
+${1:parser}.add_argument("-v", "--verbose", help="Make the output verbose", action="store_true")
+endsnippet
+
+snippet arg-optional "Add optional argument" b
+${1:parser}.add_argument("-${2:f}"${2:, "--${3:long-name}"}, help="${4:Do some stuff}", action="${5:store_true}")
+endsnippet
+
+snippet arg-positional "Add positional argument" b
+${1:parser}.add_argument("${2:name}", help="${3:Do some stuff}", action="${4:store}")
+endsnippet
 
 snippet stdout "Stdout function in python" b
 print(${1:"${2:text}"})$0
@@ -39,5 +63,5 @@ endsnippet
 
 snippet readlines "Read line by line of a file descriptro" b
 for ${1:line} in ${2:file_descriptor}:
-    ${3:pass}
+	${3:pass}
 endsnippet
