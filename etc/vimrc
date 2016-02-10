@@ -109,6 +109,8 @@ nnoremap <localleader>f /
 
 " too complicated to replace
 nnoremap <localleader>r :%s/
+"replace in the current visual selection
+vnoremap <localleader>r :s/
 " replace at the current line
 nnoremap <localleader>rr :.s/
 
