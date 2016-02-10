@@ -21,7 +21,7 @@ PLUGIN_INSTALLED=""
 
 begin_install() {
   installing $plug_name
-  if test -d $VIM_INSTALL_FOLDER/$folder_name; then 
+  if test -d $VIM_INSTALL_FOLDER/$folder_name; then
     already_installed $plug_name
     PLUGIN_INSTALLED="True"
   else
@@ -31,9 +31,9 @@ begin_install() {
 
 check_brew(){
   if which brew
-  then 
+  then
     echo "Brew detected"
-  else 
+  else
     echo "Brew not detected, install it, go to http://brew.sh"
     echo "Install it running:"
     echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
@@ -50,7 +50,7 @@ already_installed(){
 }
 
 add_plugin_to_vimrc(){
-  if test -n "$1"; then 
+  if test -n "$1"; then
     link=$1
   else
     link=$plug_name
@@ -62,7 +62,7 @@ add_plugin_to_vimrc(){
 }
 
 check_for_plugin_in_vimrc(){
-  if test -n "$1"; then 
+  if test -n "$1"; then
     link=$1
   else
     link=$plug_name
@@ -73,7 +73,7 @@ check_for_plugin_in_vimrc(){
     echo -e " \033[4;31mError:: Plugin information for $link not found in $VIMRC file... Add it, I could do it myself but I decided it was not a good idea...\033[0m "
     echo -e "\t\t\t Just add \033[0;96mPlugin '$plug_name'\033[0m to your .vimrc"
     exit 1
-  fi 
+  fi
 }
 
 install_with_vundle(){
@@ -82,7 +82,7 @@ install_with_vundle(){
 }
 
 recognise_os () {
-  if [ "$(uname)" == "Darwin"  ] 
+  if [ "$(uname)" == "Darwin"  ]
   then
     __MAC__="TRUE"
     echo "We are on a MAC, yeah"
@@ -106,9 +106,9 @@ recognise_os
 #  CONTROL OF VIM FOLDERS AND CONF FILES  #
 ###########################################
 
-# CONTROL OF DIRECTORIES 
+# CONTROL OF DIRECTORIES
 if test -d $VIM_FOLDER
-then 
+then
   echo "Folder .vim detected..."
   if test -d $VIM_INSTALL_FOLDER
   then
@@ -132,7 +132,7 @@ installing Vundle.vim
 if test -e $VIM_INSTALL_FOLDER/Vundle.vim
 then
   already_installed Vundle.vim
-else	
+else
   echo "Vundle.vim not detected"
   echo "Getting Vundle from $VUNDLE_URL"
   git clone $VUNDLE_URL $VIM_INSTALL_FOLDER/Vundle.vim
@@ -147,12 +147,12 @@ fi
 #YCM_URL="https://github.com/Valloric/YouCompleteMe"
 #installing YouCompleteMe
 #if [ $__MAC__ ]
-#then 
+#then
 #echo "We need MacVim"
 #if [ $(which mvim) ]
-#then 
+#then
 #echo "MacVim (mvim) detected..."
-#else 
+#else
 #echo "MacVim (mvim) not detected... Installing it"
 #brew install MacVim
 #fi
@@ -162,12 +162,12 @@ fi
 #then
 #already_installed YouCompleteMe
 #else
-#echo "YouCompleteMe not detected, getting it from $YCM_URL"	
+#echo "YouCompleteMe not detected, getting it from $YCM_URL"
 #git clone $YCM_URL $VIM_INSTALL_FOLDER/YouCompleteMe
 #cd $VIM_INSTALL_FOLDER/YouCompleteMe
 #git submodule update --init --recursive
 #python install.py --clang-completer
-#cd ~ 
+#cd ~
 #check_for_plugin_in_vimrc "Valloric/YouCompleteMe"
 #install_with_vundle
 
@@ -183,7 +183,7 @@ folder_name="nerdtree"
 plug_name="scrooloose/nerdtree"
 begin_install
 if test -z "$PLUGIN_INSTALLED"; then
-  check_for_plugin_in_vimrc 
+  check_for_plugin_in_vimrc
   install_with_vundle
 fi
 
@@ -195,7 +195,7 @@ folder_name="vim-airline"
 plug_name="bling/vim-airline"
 begin_install
 if test -z "$PLUGIN_INSTALLED"; then
-  check_for_plugin_in_vimrc 
+  check_for_plugin_in_vimrc
   install_with_vundle
 fi
 
@@ -205,7 +205,7 @@ folder_name="vim-airline-themes"
 plug_name="vim-airline/vim-airline-themes"
 begin_install
 if test -z "$PLUGIN_INSTALLED"; then
-  check_for_plugin_in_vimrc 
+  check_for_plugin_in_vimrc
   install_with_vundle
 fi
 
@@ -232,7 +232,7 @@ plug_name="SirVer/ultisnips"
 begin_install
 if test -z "$PLUGIN_INSTALLED"; then
   # UltiSnips needs at least vim 7.4.x to work
-  # check it 
+  # check it
   if vim --version | grep 7.4
   then
     check_for_plugin_in_vimrc
@@ -240,7 +240,7 @@ if test -z "$PLUGIN_INSTALLED"; then
   else
     echo "UltiSnips (the nice program for autocompleting code) needs at least vim 7.4 to work"
     echo "It is anyways a good idea to install a newer vim version"
-    read -p "Press any key to continue... " 
+    read -p "Press any key to continue... "
   fi
 fi
 
@@ -266,8 +266,8 @@ folder_name="nerdcommenter"
 plug_name="scrooloose/nerdcommenter"
 begin_install
 if test -z "$PLUGIN_INSTALLED"; then
-  check_for_plugin_in_vimrc 
-  install_with_vundle 
+  check_for_plugin_in_vimrc
+  install_with_vundle
 fi
 
 
@@ -307,8 +307,8 @@ begin_install
 if test -z "$PLUGIN_INSTALLED"; then
   # Neocomplete needs vim with lua support
   # We have to Test it !
-  if vim --version | grep +lua 
-  then 
+  if vim --version | grep +lua
+  then
     check_for_plugin_in_vimrc
     install_with_vundle
   else
@@ -320,7 +320,7 @@ if test -z "$PLUGIN_INSTALLED"; then
     else
       echo "The packages vim-nox, vim-gtk, vim-gnome and vim-athena are built with lua dependencies"
     fi
-    read -p "Press any key to continue... " 
+    read -p "Press any key to continue... "
   fi
 fi
 
@@ -380,7 +380,7 @@ fi
   #else
     ##Command t needs vim compiled with ruby support
     #echo "Command-t needs ruby support for vim, check it with ( vim --version | grep ruby)"
-    #read -p "Press any key to continue... " 
+    #read -p "Press any key to continue... "
   #fi
 #fi
 
