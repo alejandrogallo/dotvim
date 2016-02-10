@@ -288,4 +288,4 @@ endif
 set background=dark
 
 
-" vim:set foldmethod=marker
+" vim:foldmethod=marker
