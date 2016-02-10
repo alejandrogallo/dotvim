@@ -1,6 +1,6 @@
-""""""""""""""""""""""
-"  VUNDLE.VIM STUFF  "
-""""""""""""""""""""""
+"  VUNDLE.VIM STUFF  {{{1"
+
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -40,9 +40,11 @@ call vundle#end()
 
 
 
-"""""""""""""""""""
-"  GENERAL STUFF  "
-"""""""""""""""""""
+" GENERAL STUFF {{{1 "
+
+" allowing modeline
+set modeline
+
 "No compatibility with vi
 set nocompatible
 
@@ -89,9 +91,8 @@ set list
 
 
 
-""""""""""""""""""""""
-"  LEADER key STUFF  "
-""""""""""""""""""""""
+" LEADER KEY {{{1 "
+
 "Set maplocalleader to something else if you like
 let mapleader=';'
 
@@ -128,9 +129,8 @@ vnoremap <localleader>t :Tabularize /
 
 
 
-""""""""""""""""""
-"  Buffer stuff  "
-""""""""""""""""""
+" Buffer control {{{1 "
+
 "Change to next buffer
 noremap <Tab> :bn<CR>
 
@@ -143,9 +143,9 @@ nnoremap <localleader>bd :bd<CR>
 
 
 
-"""""""""""""
-"  AIRLINE  "
-"""""""""""""
+"  AIRLINE  {{{1"
+
+
 let g:airline_powerline_fonts = 0
 
 let g:Powerline_symbols = 'fancy'
@@ -158,9 +158,7 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 
-"""""""""""""""""""""
-"  ULTISNIPS STUFF  "
-"""""""""""""""""""""
+"  ULTISNIPS STUFF  {{{1"
 let g:UltiSnipsExpandTrigger="<C-j>"
 
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
@@ -174,9 +172,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 
-"""""""""""""""""""""""
-"  TAB CONFIGURATION  "
-"""""""""""""""""""""""
+"  TAB CONFIGURATION  {{{1"
+
+
 "Set tabstop to tell vim how many columns a tab counts for
 set tabstop=2
 
@@ -212,17 +210,14 @@ nnoremap <localleader>t~ :call CreateRsTTitle("~")<cr>
 
 
 
-"""""""""""""""
-"  EMMET.VIM  "
-"""""""""""""""
+"  EMMET.VIM  {{{1"
 "Remap emmet trigger jey ctrl + e (CTRL+EMMET)
 let g:user_emmet_leader_key='<C-e>'
 
 
 
-"""""""""""""""""""""
-"  NEOCOMPLETE.VIM  "
-"""""""""""""""""""""
+"  NEOCOMPLETE.VIM  {{{1"
+
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_fuzzy_completion = 1
@@ -230,9 +225,8 @@ let g:neocomplete#enable_fuzzy_completion = 1
 
 
 
-""""""""""""""""
-"  TERM STUFF  "
-""""""""""""""""
+"  TERM STUFF  {{{1"
+
 if &term ==# "xterm"
   " Sometimes when environment variable TERM is only set 
   " to xterm, I have problems with colors, so I try to 
@@ -243,9 +237,8 @@ elseif &term ==# "screen"
 endif
 
 
-""""""""""""
-"  Ctrl-p  "
-""""""""""""
+"  Ctrl-p  {{{1"
+
 let g:ctrlp_map = '<c-p>' " This is the default
 let g:ctrlp_cmd = 'CtrlP'
 
@@ -254,24 +247,17 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 
 
-function! AppendUnicodeMath()
-  let l:math = system("tex2unicode.in", getline("."))
-  call append(".", l:math)
-endfunction
 
 
+"  MOVING AROUNDK  {{{1"
 
-""""""""""""""""""""
-"  MOVING AROUNDK  "
-""""""""""""""""""""
 "go to the next parentheses
 nnoremap gp /(<CR>
 nnoremap gP ?(<CR>
 
 
-"""""""""""""""
-"  SYNTASTIC  "
-"""""""""""""""
+"  SYNTASTIC  {{{1"
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -284,9 +270,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_ignore_errore = [ "proprietary attribute \"ng-\" "]
 
 
-""""""""""""""""
-"  colortheme  "
-""""""""""""""""
+"  colortheme  {{{1"
+
 let g:solarized_termcolors=256
 colorscheme solarized
 let b:hour = strftime("%H")
@@ -298,3 +283,4 @@ endif
 set background=dark
 
 
+" vim:set foldmethod=marker
