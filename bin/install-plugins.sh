@@ -497,3 +497,16 @@ if test -z "$PLUGIN_INSTALLED"; then
   check_for_plugin_in_vimrc
   install_with_vundle
 fi
+
+##################
+#  vim hardtime  #
+##################
+#practice not using jjjj and so
+
+folder_name="vim-hardtime"
+plug_name= 'takac/vim-hardtime'
+begin_install
+if test -z "$PLUGIN_INSTALLED"; then
+  check_for_plugin_in_vimrc
+  install_with_vundle
+fi
