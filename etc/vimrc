@@ -5,6 +5,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'vim-scripts/angular.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-fugitive'
@@ -272,7 +273,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " ignore some anoying warnings 
-let g:syntastic_html_tidy_ignore_errore = [ "proprietary attribute \"ng-\" "]
 
 
 "  colortheme  {{{1"
