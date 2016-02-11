@@ -510,3 +510,17 @@ if test -z "$PLUGIN_INSTALLED"; then
   check_for_plugin_in_vimrc
   install_with_vundle
 fi
+
+#################
+#  easy motion  #
+#################
+
+
+folder_name="vim-easymotion"
+plug_name= 'easymotion/vim-easymotion'
+begin_install
+if test -z "$PLUGIN_INSTALLED"; then
+  check_for_plugin_in_vimrc
+  install_with_vundle
+fi
+
