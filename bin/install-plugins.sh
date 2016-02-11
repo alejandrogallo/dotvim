@@ -490,8 +490,8 @@ fi
 #  vim angular  #
 #################
 
-folder_name="vim.angular"
-plug_name="vim-scripts/vim.angular"
+folder_name="vim-angular"
+plug_name= 'burnettk/vim-angular'
 begin_install
 if test -z "$PLUGIN_INSTALLED"; then
   check_for_plugin_in_vimrc
