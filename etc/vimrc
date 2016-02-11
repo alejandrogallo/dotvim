@@ -107,10 +107,10 @@ set list
 " LEADER KEY {{{1 "
 
 "Set maplocalleader to something else if you like
-let mapleader=';'
+let maplocalleader = "\<Space>"
 
 "Set maplocalleader to something else if you like
-let maplocalleader=','
+let mapleader = ','
 
 "Save current buffer
 nnoremap <localleader>w :w<cr>
