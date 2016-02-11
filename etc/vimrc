@@ -44,9 +44,16 @@ call vundle#end()
 " GENERAL STUFF {{{1 "
 
 " convert print as a keyword in python 2 to a function for python 3
-fun PrintPython2ToPython3()
+fun! PrintPython2ToPython3()
   normal! :%s/\vprint\s+(.*)/print(\1)/c
 endf
+
+"set undo stuff, it needs VIM 7.3 at least
+if has("persistent_undo")
+" src: http://stackoverflow.com/questions/17936130/vim-undo-undo-changes-after-file-write
+  set undofile
+  set undodir=$MYVIMRC/etc/undo
+endif
 
 " allowing modeline
 set modeline
