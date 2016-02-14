@@ -66,7 +66,7 @@ set nocompatible
 "Go to normal mode typing  kj in insert mode
 inoremap kj <ESC>
 
-" map : to - 
+" map : to -
 noremap - :
 
 "Autocompletion from vim
@@ -77,7 +77,7 @@ set number
 
 " Relative numbering
 if v:version >= 704
-  "is only supported for vim 7.04 and above... 
+  "is only supported for vim 7.04 and above...
   set relativenumber
 endif
 
@@ -86,7 +86,7 @@ filetype plugin on
 "Automatic indentation for plugins
 filetype plugin indent on
 
-"enable coloring and so on 
+"enable coloring and so on
 syntax enable
 
 "Highlight search as you type the searching word
@@ -97,19 +97,50 @@ set wildmenu
 
 " Marks for special characters
 set listchars=eol:¬,trail:·
-set listchars+=tab:>\ 
+set listchars+=tab:>\
 " Activate listchars
 set list
 
 
+" Grep stuff {{{1 "
 
-" Quickfix stff {{{1 "
+function! GrepAndReplace(word, ...)
+  let folder = "."
+  let word_replace = ""
+  echom "Contents of the replacing list"
+  echom "------------------------------"
+  let i = 1
+  for argument in a:000
+    echom i
+    if i == len(a:000)
+      let word_replace = word_replace.argument
+    else
+      let word_replace = word_replace.argument." "
+    endif
+    let i+=1
+    echom argument
+  endfor
+  let command = "grep -E \"".a:word."\" -R ".folder
+  echom "Replacing... : ".a:word
+  echom "By           : ".word_replace
+  echom command
+  call setqflist([])
+  execute command
+  let qflist = getqflist()
+  for matchfl in qflist
+    execute ".s/".a:word."/".word_replace."/gc"
+    try
+      execute "cnext"
+    catch
+      echom "No more items"
+    endtry
+  endfor
+endfunction
 
-" remap ccnext and cprevious, nice for grep, make etc...
-nnoremap <localleader>cn :cnext<cr>
-nnoremap <localleader>cp :cprevious<cr>
+command! -nargs=* Greplace call GrepAndReplace(<f-args>)
 
-" LEADER KEY {{{1 "
+
+" Leader and localleader {{{1 "
 
 "Set maplocalleader to something else if you like
 let maplocalleader = "\<Space>"
@@ -136,7 +167,7 @@ nnoremap <localleader>rr :.s/
 "Toggle NERDTree file structure easily
 noremap <localleader>ne :NERDTreeToggle<cr>
 
-" Toggle Tagbar 
+" Toggle Tagbar
 noremap <localleader>tg :TagbarToggle<cr>
 
 "edit vimrc
@@ -147,6 +178,12 @@ vnoremap <localleader>t :Tabularize /
 
 
 
+" Quickfix stff {{{1 "
+
+" remap ccnext and cprevious, nice for grep, make etc...
+nnoremap <localleader>cn :cnext<cr>
+nnoremap <localleader>cp :cprevious<cr>
+
 " Buffer control {{{1 "
 
 "Change to next buffer
@@ -155,7 +192,7 @@ noremap <Tab> :bn<CR>
 "Change to previous buffer
 noremap <S-Tab> :bp<CR>
 
-"Delete 
+"Delete
 nnoremap <localleader>bd :bd<CR>
 
 " buffer explorer
@@ -249,8 +286,8 @@ let g:neocomplete#enable_fuzzy_completion = 1
 "  TERM STUFF  {{{1"
 
 if &term ==# "xterm"
-  " Sometimes when environment variable TERM is only set 
-  " to xterm, I have problems with colors, so I try to 
+  " Sometimes when environment variable TERM is only set
+  " to xterm, I have problems with colors, so I try to
   " force 256 colors and not only 8
   let &term = "xterm-256color"
 elseif &term ==# "screen"
@@ -287,7 +324,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" ignore some anoying warnings 
+" ignore some anoying warnings
 
 
 "  colortheme  {{{1"
@@ -304,3 +341,4 @@ set background=dark
 
 
 " vim:foldmethod=marker
+
