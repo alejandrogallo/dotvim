@@ -103,6 +103,12 @@ set list
 
 
 
+" Quickfix stff {{{1 "
+
+" remap ccnext and cprevious, nice for grep, make etc...
+nnoremap <localleader>cn :cnext<cr>
+nnoremap <localleader>cp :cprevious<cr>
+
 " LEADER KEY {{{1 "
 
 "Set maplocalleader to something else if you like
