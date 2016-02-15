@@ -143,9 +143,8 @@ command! -nargs=* Greplace call GrepAndReplace(<f-args>)
 
 
 " Folding stuff {{{1 "
-nnoremap <localleader>zmm :set foldmethod=marker
-nnoremap <localleader>zmi :set foldmethod=indent
-
+nnoremap <localleader>zmm :set foldmethod=marker<cr>
+nnoremap <localleader>zmi :set foldmethod=indent<cr>
 
 " Leader and localleader {{{1 "
 
