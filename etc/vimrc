@@ -178,7 +178,8 @@ nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
 " align stuff for =
 vnoremap <localleader>t :Tabularize /
 
-
+" edit bashrc
+nnoremap <localleader>b :edit $DOTFILES/link/bashrc<cr>
 
 " Folding stuff {{{1 "
 nnoremap <localleader>zmm :set foldmethod=marker<cr>
