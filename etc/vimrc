@@ -142,10 +142,6 @@ endfunction
 command! -nargs=* Greplace call GrepAndReplace(<f-args>)
 
 
-" Folding stuff {{{1 "
-nnoremap <localleader>zmm :set foldmethod=marker<cr>
-nnoremap <localleader>zmi :set foldmethod=indent<cr>
-
 " Leader and localleader {{{1 "
 
 "Set maplocalleader to something else if you like
@@ -183,6 +179,10 @@ nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
 vnoremap <localleader>t :Tabularize /
 
 
+
+" Folding stuff {{{1 "
+nnoremap <localleader>zmm :set foldmethod=marker<cr>
+nnoremap <localleader>zmi :set foldmethod=indent<cr>
 
 " Quickfix stff {{{1 "
 
@@ -306,6 +306,7 @@ endif
 
 let g:ctrlp_map = 'Q' " This is the default
 let g:ctrlp_cmd = 'CtrlP'
+nnoremap <localleader>Q :CtrlPBuffer<cr>
 
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
