@@ -129,15 +129,22 @@ function! GrepAndReplace(word, ...)
   let qflist = getqflist()
   for matchfl in qflist
     execute ".s/".a:word."/".word_replace."/gc"
-    try
-      execute "cnext"
-    catch
-      echom "No more items"
-    endtry
+    execute "write"
+    execute "cnext"
+    "try
+      "execute "cnext"
+    "catch
+      "echom "No more items"
+    "endtry
   endfor
 endfunction
 
 command! -nargs=* Greplace call GrepAndReplace(<f-args>)
+
+
+" Folding stuff {{{1 "
+nnoremap <localleader>zmm :set foldmethod=marker
+nnoremap <localleader>zmi :set foldmethod=indent
 
 
 " Leader and localleader {{{1 "
