@@ -1,7 +1,56 @@
+snippet shbang "Shebang #!" b
+#! /bin/env bash
+endsnippet
+
 snippet scriptDir "Variable w script directory" b
 ${1:SCRIPT_DIR}=$(dirname \$0) $0
 endsnippet
 
 snippet sout "Stdout" b
 echo ${1:${2:stuff}}
+endsnippet
+
+snippet $ "Snippet variable" i
+$\{${1:n}:${2:Default}\}$0
+endsnippet
+
+snippet argv-parse "Parse command line arguments" b
+__SCRIPT_VERSION="${1:-Version}"
+__SCRIPT_NAME=$( basename $0 )
+__DESCRIPTION=${2:-Description_one_liner}
+
+
+function usage_head() {
+echo "Usage :  $__SCRIPT_NAME [-h|-help] [-v|-version]"
+}
+function usage ()
+{
+cat <<EOF
+$(usage_head)
+
+		$__DESCRIPTION
+
+		Options:
+		-h|help       Display this message
+		-v|version    Display script version"
+
+
+		This program is maintained by Alejandro Gallo.
+EOF
+}    # ----------  end of function usage  ----------
+
+while getopts ":hv" opt
+do
+	case $opt in
+
+	h|help     )  usage; exit 0   ;;
+
+	v|version  )  echo "$__SCRIPT_NAME -- Version $__SCRIPT_VERSION"; exit 0   ;;
+
+	* )  echo -e "\n  Option does not exist : $OPTARG\n"
+			usage_head; exit 1   ;;
+
+	esac    # --- end of case ---
+done
+shift $(($OPTIND-1))
 endsnippet
