@@ -32,6 +32,14 @@ snippet for "Embedded shell for" b
 	done
 endsnippet
 
+snippet ife "Bash if else" b
+	@if ${1:Cond}; then \
+		${2:#Body}; \
+	else \
+		${3:#Body}; \
+	fi
+endsnippet
+
 snippet sout "Stdout" b
 @echo $1
 endsnippet
