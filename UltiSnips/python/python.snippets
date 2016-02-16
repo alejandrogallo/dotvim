@@ -56,16 +56,47 @@ snippet arg-positional "Add positional argument" b
 ${1:parser}.add_argument("${2:name}", help="${3:Do some stuff}", action="${4:store}")
 endsnippet
 
-snippet sou "Stdout function in python" b
-print(${1:"${2:text}"})$0
-endsnippet
 
 snippet printv "Stdout function in python" b
 printv(${1:"${2:text}"})$0
 endsnippet
 
 
+
+
+
+
+########################
+#  BASH LIKE COMMANDS  #
+########################
+
+
+
 snippet readlines "Read line by line of a file descriptro" b
 for ${1:line} in ${2:file_descriptor}:
 	${3:pass}
+endsnippet
+
+snippet sou "Stdout function in python" b
+print(${1:"${2:text}"})$0
+endsnippet
+
+snippet exit "exit function" b
+sys.exit(${1:1})$0
+endsnippet
+
+snippet mkdir "Make directory" b
+os.mkdir(${1:"${2:path/to/dir}"}, mode=0777)$0
+endsnippet
+
+snippet cd "Change directory" b
+os.chdir(${1:"${2:path/to/dir}"})$0
+endsnippet
+
+snippet env "Environment variable" i
+os.environ[ ${1:"${2:VAR_NAME}"} ]$0
+endsnippet
+
+snippet ls "List of files" b
+os.listdir(${1:"."})$0
 endsnippet
