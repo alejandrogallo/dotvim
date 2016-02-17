@@ -47,11 +47,11 @@ call vundle#end()
 
 function! TrailingSpacesClean()
   echom "Removing trailing spaces"
-  normal! :%s/\v\s+$//g
+  %s/\v\s+$//g
 endfunction
 " convert print as a keyword in python 2 to a function for python 3
 fun! PrintPython2ToPython3()
-  normal! :%s/\vprint\s+(.*)/print(\1)/c
+  %s/\vprint\s+(.*)/print(\1)/c
 endf
 
 "set undo stuff, it needs VIM 7.3 at least
