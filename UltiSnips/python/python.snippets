@@ -101,6 +101,10 @@ snippet ls "List of files" b
 os.listdir(${1:"."})$0
 endsnippet
 
+snippet basename "Bash basename" i
+os.path.basename(${1:"${2:path}"})$0
+endsnippet
+
 ############
 #  SPHINX  #
 ############
