@@ -45,6 +45,10 @@ call vundle#end()
 
 " GENERAL STUFF {{{1 "
 
+function! TrailingSpacesClean()
+  echom "Removing trailing spaces"
+  normal! :%s/\v\s+$//g
+endfunction
 " convert print as a keyword in python 2 to a function for python 3
 fun! PrintPython2ToPython3()
   normal! :%s/\vprint\s+(.*)/print(\1)/c
