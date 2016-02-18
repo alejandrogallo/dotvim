@@ -185,6 +185,11 @@ vnoremap <localleader>t :Tabularize /
 " edit bashrc
 nnoremap <localleader>b :edit $DOTFILES/link/bashrc<cr>
 
+" paste adding a blank space
+nnoremap <localleader>p :normal! a <ESC>p
+
+
+
 " Folding stuff {{{1 "
 nnoremap <localleader>zmm :set foldmethod=marker<cr>
 nnoremap <localleader>zmi :set foldmethod=indent<cr>
