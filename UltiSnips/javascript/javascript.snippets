@@ -13,3 +13,9 @@ endsnippet
 snippet sout "stdout" b
 console.log(${1:"${2:string}"});
 endsnippet
+
+snippet forEach "For each loop" b
+${1:object}.forEach(function(${2:element}, ${3:index}){
+${4://Body}
+});$0
+endsnippet
