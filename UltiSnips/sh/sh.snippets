@@ -20,9 +20,7 @@ __SCRIPT_NAME=$( basename \$0 )
 __DESCRIPTION=${2:-Description_one_liner}
 
 
-function usage_head() {
-echo "Usage :  $__SCRIPT_NAME [-h|-help] [-v|-version]"
-}
+function usage_head() { echo "Usage :  $__SCRIPT_NAME [-h|-help] [-v|-version]"; }
 function usage ()
 {
 cat <<EOF
