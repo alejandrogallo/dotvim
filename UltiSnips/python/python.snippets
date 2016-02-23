@@ -57,7 +57,7 @@ ${1:parser}.add_argument("${2:name}", help="${3:Do some stuff}", action="${4:sto
 endsnippet
 
 
-snippet printv "Stdout function in python" b
+snippet so "Stdout function in python" b
 printv(${1:"${2:text}"})$0
 endsnippet
 
@@ -121,3 +121,34 @@ snippet sph-returns "Sphinx returns" b
 :returns: ${1:Description}
 ${2::rtype:  ${3:return_type}}
 endsnippet
+
+
+
+
+#############
+#  Classes  #
+#############
+
+snippet defxet "Setter and getter definition" b
+def set${1:Name}(self${2:, ${3:args}}):
+	pass
+def get$1(self$2):
+	pass
+endsnippet
+
+
+
+###################
+#  General stuff  #
+###################
+
+snippet "im(port)?(\S+)" "Description" r
+import ${1:`!p
+snip.rv = match.group(2)
+`}
+endsnippet
+
+
+
+
+
