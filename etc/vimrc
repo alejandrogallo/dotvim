@@ -178,13 +178,14 @@ noremap <localleader>ne :NERDTreeToggle<cr>
 noremap <localleader>tg :TagbarToggle<cr>
 
 "edit vimrc
-nnoremap <localleader>v :e $HOME/.vim/etc/vimrc<cr>
+nnoremap <localleader>V :e $HOME/.vim/etc/vimrc<cr>
+
+" edit bashrc
+nnoremap <localleader>B :edit $DOTFILES/link/bashrc<cr>
 
 " align stuff for =
 vnoremap <localleader>t :Tabularize /
 
-" edit bashrc
-nnoremap <localleader>b :edit $DOTFILES/link/bashrc<cr>
 
 " paste adding a blank space
 nnoremap <localleader>p :normal! a <ESC>p
@@ -213,7 +214,7 @@ noremap <S-Tab> :bp<CR>
 nnoremap <localleader>bd :bd<CR>
 
 " buffer explorer
-nnoremap <localleader>bb :normal <leader>be<cr>
+"nnoremap <localleader>bb :normal <leader>be<cr>
 
 
 
@@ -317,7 +318,7 @@ endif
 
 let g:ctrlp_map = 'Q' " This is the default
 let g:ctrlp_cmd = 'CtrlP'
-nnoremap <localleader>Q :CtrlPBuffer<cr>
+nnoremap <localleader>bb :CtrlPBuffer<cr>
 
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']

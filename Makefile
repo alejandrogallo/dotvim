@@ -1,4 +1,4 @@
-CONFIGURATION_FILES=vimrc tmux.conf
+CONFIGURATION_FILES=vimrc
 
 init: link-vimrc install-plugins init-submodules update-submodules
 

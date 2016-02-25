@@ -6,11 +6,11 @@ snippet scriptDir "Variable w script directory" b
 ${1:SCRIPT_DIR}=$(dirname \$0) $0
 endsnippet
 
-snippet sout "Stdout" b
+snippet so "Stdout" b
 echo ${1:${2:stuff}}
 endsnippet
 
-snippet $ "Snippet variable" i
+snippet $ "Variable" i
 $\{${1:n}:${2:Default}\}$0
 endsnippet
 
@@ -20,9 +20,7 @@ __SCRIPT_NAME=$( basename \$0 )
 __DESCRIPTION=${2:-Description_one_liner}
 
 
-function usage_head() {
-echo "Usage :  $__SCRIPT_NAME [-h|-help] [-v|-version]"
-}
+function usage_head() { echo "Usage :  $__SCRIPT_NAME [-h|-help] [-v|-version]"; }
 function usage ()
 {
 cat <<EOF
