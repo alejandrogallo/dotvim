@@ -162,6 +162,7 @@ nnoremap <localleader>q :q<cr>
 
 "/ is way too far away, and I want case insensitive!
 nnoremap <localleader>f /\c
+nnoremap <localleader>F ?\c
 
 " too complicated to replace
 nnoremap <localleader>r :%s/
