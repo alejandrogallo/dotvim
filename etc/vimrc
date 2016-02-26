@@ -311,6 +311,8 @@ if &term ==# "xterm"
   let &term = "xterm-256color"
 elseif &term ==# "screen"
   let &t_Co = 256
+elseif &term ==# "linux"
+  let &t_Co = 256
 endif
 
 
