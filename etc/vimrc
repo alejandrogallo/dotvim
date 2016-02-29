@@ -301,6 +301,15 @@ let g:neocomplete#enable_fuzzy_completion = 1
 
 
 
+" FuGitive {{{1 "
+nnoremap <localleader>gs :Gstatus
+nnoremap <localleader>gw :Gwrite
+nnoremap <localleader>gm :Gcommit
+nnoremap <localleader>gma :Gcommit -a
+nnoremap <localleader>gp :Gpush
+nnoremap <localleader>gu :Gpull
+
+
 
 "  TERM STUFF  {{{1"
 
