@@ -213,9 +213,8 @@ noremap <S-Tab> :bp<CR>
 "Delete
 nnoremap <localleader>bd :bd<CR>
 
-" buffer explorer
-"nnoremap <localleader>bb :normal <leader>be<cr>
-
+"Make shortcut
+nnoremap <localleader>m :make
 
 
 
