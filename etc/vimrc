@@ -244,6 +244,9 @@ let g:UltiSnipsListSnippets="<c-l>"
 
 let g:UltiSnipsEditSplit="vertical"
 
+" edit ultisnips
+nnoremap <localleader>ul :UltiSnipsEdit<cr>
+
 
 
 
