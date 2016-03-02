@@ -346,6 +346,7 @@ nnoremap gP ?(<CR>
 
 "  SYNTASTIC  {{{1"
 
+"from repository
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -355,6 +356,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " ignore some anoying warnings
+
+nnoremap <localleader>ts :SyntasticToggleMode<cr>
 
 
 "  colortheme  {{{1"
