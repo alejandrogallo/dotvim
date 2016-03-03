@@ -524,3 +524,17 @@ if test -z "$PLUGIN_INSTALLED"; then
   install_with_vundle
 fi
 
+#############
+#  FSwitch  #
+#############
+
+
+
+folder_name="fswitch"
+plug_name= 'derekwyatt/vim-fswitch'
+begin_install
+if test -z "$PLUGIN_INSTALLED"; then
+  check_for_plugin_in_vimrc
+  install_with_vundle
+fi
+
