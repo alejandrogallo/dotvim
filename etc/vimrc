@@ -5,6 +5,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'lervag/vimtex'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'takac/vim-hardtime'
