@@ -35,7 +35,26 @@ endsnippet
 snippet graphic "Include graphic" b
 \includegraphics[]{${1:filePath}}
 endsnippet
-
+snippet twidth "text width" b
+\textwidth
+endsnippet
+snippet theight "text height" b
+\textheight
+endsnippet
+snippet minipage "Minipage" b
+\begin{minipage}[${1:t}]{${2:0.5}\textwidth}
+${3:Your text}
+\end{minipage}
+endsnippet
+snippet centeri "Centering" b
+\centering
+endsnippet
+snippet vspace "vertical space" b
+\vspace{${1:1cm}}
+endsnippet
+snippet hspace "horizontal space" b
+\hspace{${1:1cm}}
+endsnippet
 
 snippet mrm
 \mathrm{${1:text}}$0
@@ -43,6 +62,10 @@ endsnippet
 
 snippet mbf
 \mathbf{${1:text}}$0
+endsnippet
+
+snippet it "Text italics with visual support"
+\textit{${1:${VISUAL}}}$0
 endsnippet
 
 
