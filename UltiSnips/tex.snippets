@@ -3,15 +3,15 @@
 ################
 
 snippet d "Subindex (down)" i
-_{${1}} ${0}
+_{${1:${VISUAL}}} ${0}
 endsnippet
 
 snippet u "Superindex (upper)" i
-^{${1}} ${0}
+^{${1:${VISUAL}}} ${0}
 endsnippet
 
 snippet m
-$ ${1} $ ${0}
+$ ${1:${VISUAL}} $ ${0}
 endsnippet
 
 snippet qu
@@ -22,23 +22,23 @@ snippet qqu
 \qquad
 endsnippet
 snippet hat
-\hat{$1}$0
+\hat{${1:${VISUAL}}}$0
 endsnippet
 
 snippet sqr
-\sqrt{$1 } $0
+\sqrt{${1:${VISUAL}} } $0
 endsnippet
 
 snippet set
-\left \\{ $1 \right \\} $0
+\left \\{ ${1:${VISUAL}} \right \\} $0
 endsnippet
 
 snippet mrm
-\mathrm{${1:text}}$0
+\mathrm{${1:${VISUAL}}}$0
 endsnippet
 
 snippet mbf
-\mathbf{${1:text}}$0
+\mathbf{${1:${VISUAL}}}$0
 endsnippet
 
 snippet document "documentclass" b
@@ -56,7 +56,7 @@ snippet theight "text height" b
 endsnippet
 snippet minipage "Minipage" b
 \begin{minipage}[${1:t}]{${2:0.5}\textwidth}
-${3:Your text}
+${3:${VISUAL}}
 \end{minipage}
 endsnippet
 snippet centeri "Centering" b
@@ -85,7 +85,7 @@ endsnippet
 
 #SPINS
 snippet Spin2
-S_{$1}^{$2} $0
+S_{${1:${VISUAL}}}^{$2} $0
 endsnippet
 
 snippet Spinx2
@@ -102,11 +102,11 @@ endsnippet
 
 #brakets..
 snippet ket
-\left | $1 \right \rangle $0
+\left | ${1:${VISUAL}} \right \rangle $0
 endsnippet
 
 snippet bra
-\left \langle $1 \right | $0
+\left \langle ${1:${VISUAL}} \right | $0
 endsnippet
 
 
