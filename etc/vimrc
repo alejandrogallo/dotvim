@@ -504,6 +504,11 @@ else
   set background=dark
 endif
 
+if &term=="linux"
+  color default
+  set background=dark
+endif
+
 
 " Spelling {{{1 "
 
