@@ -47,6 +47,10 @@ call vundle#end()
 
 " GENERAL STUFF {{{1 "
 
+function! TabReplace()
+  %s/\t/  /g
+endfunction
+
 function! TrailingSpacesClean()
   echom "Removing trailing spaces"
   %s/\v\s+$//g
