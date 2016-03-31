@@ -107,8 +107,8 @@ set incsearch
 set wildmenu
 
 " Marks for special characters
-set listchars=eol:Â¬,trail:Â·
-set listchars+=tab:>\ 
+set listchars=eol:¬,trail:·
+set listchars+=tab:>\  "Tab should be ok like that 
 " Activate listchars
 set list
 
@@ -384,6 +384,7 @@ if has("unix")
   set background=dark
 else
   color default
+  set background=dark
 endif
 
 
