@@ -112,6 +112,12 @@ set listchars+=tab:>\
 set list
 
 
+" Windows stuff {{{1
+
+if !has("unix")
+  set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe\ -executionpolicy\ bypass
+endif
+
 " Grep stuff {{{1 "
 
 function! GrepAndReplace(word, ...)
@@ -371,16 +377,15 @@ nnoremap <localleader>ts :SyntasticToggleMode<cr>
 
 "  colortheme  {{{1"
 
-let g:solarized_termcolors=256
-colorscheme solarized
-let b:hour = strftime("%H")
-if b:hour >= 9 && b:hour <=15
-  set background=light
-else
+if has("unix")
+  let g:solarized_termcolors=256
+  colorscheme solarized
   set background=dark
+else
+  color default
 endif
-set background=dark
 
 
+" Configuration file edit options {{{1
 " vim:foldmethod=marker
 
