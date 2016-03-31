@@ -11,7 +11,7 @@ echo ${1:${2:stuff}}
 endsnippet
 
 snippet $ "Variable" i
-$\{${1:n}:${2:Default}\}$0
+$\{${1:n}:-${2:Default}\}$0
 endsnippet
 
 snippet argv-parse "Parse command line arguments" b

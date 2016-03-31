@@ -75,6 +75,7 @@ set nocompatible
 
 "Go to normal mode typing  kj in insert mode
 inoremap kj <ESC>
+vnoremap kj <ESC>
 
 " map : to -
 noremap - :
