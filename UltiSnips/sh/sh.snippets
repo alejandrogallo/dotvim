@@ -14,6 +14,15 @@ snippet $ "Variable" i
 $\{${1:n}:-${2:Default}\}$0
 endsnippet
 
+snippet confirm "Prompt for confirmation" b
+read -p "${1:Are you sure?} (y/N)" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	# do dangerous stuff
+fi
+endsnippet
+
 snippet argv-parse "Parse command line arguments" b
 __SCRIPT_VERSION="${1:-Version}"
 __SCRIPT_NAME=$( basename \$0 )
