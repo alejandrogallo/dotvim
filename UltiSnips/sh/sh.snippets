@@ -20,6 +20,14 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	# do dangerous stuff
 fi
+REPLY= # unset REPLY after using it
+endsnippet
+
+snippet select "Select loop" b
+PS3="${1:Choice}"
+select ${2:opt} in ${3:\$some_options}; do
+	${4:echo "You have selected \$$2"}
+done
 endsnippet
 
 snippet argv-parse "Parse command line arguments" b
