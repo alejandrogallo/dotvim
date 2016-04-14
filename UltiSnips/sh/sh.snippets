@@ -33,7 +33,7 @@ endsnippet
 snippet argv-parse "Parse command line arguments" b
 __SCRIPT_VERSION="${1:-Version}"
 __SCRIPT_NAME=$( basename \$0 )
-__DESCRIPTION=${2:-Description_one_liner}
+__DESCRIPTION="${2:-Description_one_liner}"
 
 
 function usage_head() { echo "Usage :  $__SCRIPT_NAME [-h|-help] [-v|-version]"; }
