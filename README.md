@@ -38,3 +38,6 @@ particular issues, so I made a script to trigger the installation of all plugins
 1. Add the plugin to your `.vimrc` file (which is linked to `./etc/vimrc`)
 2. Add the install trigger to the `bin/install-plugins.sh` script to tailor the behaviour of the installation of the plugin.
 
+# Snippets #
+
+Checkout my snippets in `UltiSnips` folder.
