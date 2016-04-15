@@ -37,14 +37,14 @@ snippet do:Help "Dialog" b
 endsnippet
 
 
-snippet do:IllegalFileCharacters b
+snippet do:IllegalFileCharacters "" b
  
 !define ILLEGAL_CHARS "\$\\"\$*/:<>?\|"
  
 endsnippet
 
 
-snippet do:IsNT..Else b
+snippet do:IsNT..Else "" b
  
 \${If} \${IsNT}
 
@@ -59,7 +59,7 @@ snippet do:IsNT..Else b
 endsnippet
 
 
-snippet do:IsNT b
+snippet do:IsNT "" b
  
 \${If} \${IsNT}
 
@@ -70,7 +70,7 @@ snippet do:IsNT b
 endsnippet
 
 
-snippet do:IsRunningX64..Else b
+snippet do:IsRunningX64..Else "" b
  
 \${If} \${IsRunningX64}
 
@@ -85,7 +85,7 @@ snippet do:IsRunningX64..Else b
 endsnippet
 
 
-snippet do:IsRunningX64 b
+snippet do:IsRunningX64 "" b
  
 \${If} \${IsRunningX64}
 
@@ -96,7 +96,7 @@ snippet do:IsRunningX64 b
 endsnippet
 
 
-snippet do:IsServer..Else b
+snippet do:IsServer..Else "" b
  
 \${If} \${IsServer}
 
@@ -111,7 +111,7 @@ snippet do:IsServer..Else b
 endsnippet
 
 
-snippet do:IsServer b
+snippet do:IsServer "" b
  
 \${If} \${IsServer}
 
@@ -1172,7 +1172,7 @@ snippet do:UAC "Init Macro" b
 endsnippet
 
 
-snippet do:VersionCompare b
+snippet do:VersionCompare "" b
  
 \${VersionCompare} "${1:version1}" "${2:version2}" \$${3:result}
 
@@ -1537,7 +1537,7 @@ $9
 endsnippet
 
 
-snippet scaffold:InstallOptions b
+snippet scaffold:InstallOptions "" b
  
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
@@ -2149,7 +2149,7 @@ $11
 endsnippet
 
 
-snippet scaffold:ModernUI b
+snippet scaffold:ModernUI "" b
  
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
