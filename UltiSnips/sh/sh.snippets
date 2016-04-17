@@ -31,9 +31,10 @@ done
 endsnippet
 
 snippet argv-parse "Parse command line arguments" b
-__SCRIPT_VERSION="${1:-Version}"
+__SCRIPT_VERSION="${1:0.0.1}"
 __SCRIPT_NAME=$( basename \$0 )
-__DESCRIPTION="${2:-Description_one_liner}"
+__DESCRIPTION="${2:Description_one_liner}"
+__OPTIONS=":hv"
 
 
 function usage_head() { echo "Usage :  $__SCRIPT_NAME [-h|-help] [-v|-version]"; }
@@ -53,7 +54,7 @@ $(usage_head)
 EOF
 }    # ----------  end of function usage  ----------
 
-while getopts ":hv" opt
+while getopts __OPTIONS opt
 do
 	case $opt in
 
