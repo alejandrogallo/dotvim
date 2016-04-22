@@ -47,3 +47,6 @@ This is the manifest to implement a set of common snippets that should be applia
 
 
 
+to add 
+binary number
+hex number 
