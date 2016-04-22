@@ -108,8 +108,8 @@ set incsearch
 set wildmenu
 
 " Marks for special characters
-set listchars=eol:¬,trail:·
-set listchars+=tab:>\  "Tab should be ok like that 
+set listchars=eol:~,trail:*
+set listchars+=tab:>\  "Tab should be ok like that
 " Activate listchars
 set list
 
