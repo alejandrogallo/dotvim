@@ -13,11 +13,11 @@ FFLAGS = -Wall
 
 # --------------------------------------------------
 
-TARGET = mainprog
+TARGET = ${1:mainprog}
 DATADIR = Data
-SRCDIR = src
-OBJDIR = obj
-BINDIR = bin
+SRCDIR = ${2:src}
+OBJDIR = ${3:obj}
+BINDIR = ${4:bin}
 
 # ifort and gfortran take different module flags
 ifeq ($(COMPILER),ifort)
@@ -27,7 +27,7 @@ else
 endif
 
 # add any extra objects here
-OBJFILES = mainprog.o mod_lib.o
+OBJFILES = $1.o
 
 FULLTARGET = $(BINDIR)/$(TARGET)
 
@@ -63,21 +63,20 @@ $(FULLTARGET): $(OBJFILES)
 	$(FC) $(FFLAGS) $(MODULEFLAG) $(OBJDIR) -o $@ $(addprefix $(OBJDIR)/, $(OBJFILES))
 
 
-.PHONEY: deepclean
+.PHONY: deepclean
 deepclean:
 	@rm -rf *~ $(BINDIR) $(OBJDIR) $(DATADIR) $(SRCDIR)/*~ *.out *.err *.log *.ipo
 
-.PHONEY: clean
+.PHONY: clean
 clean:
 	@rm -rf *~ $(BINDIR) $(OBJDIR)  $(SRCDIR)/*~ *.out *.err *.log *.ipo
 
-.PHONEY: tidy
+.PHONY: tidy
 tidy:
 	@rm -rf $(OBJDIR) $(SRCDIR)/*~ *.out *.err *.log *.ipo
 
 # Add Dependencies here
-mainprog.o : mod_lib.o
+mainprog.o:
 
-mod_lib.o :
 
 endsnippet
