@@ -33,7 +33,7 @@ DEPDIR = deps
 all: $(BINFILE)
 	ifeq ($(MAKECMDGOALS),)
 	-include Makefile.dep
-endif
+	endif
 
 ifneq ($(filter-out clean, $(MAKECMDGOALS)),)
 	-include Makefile.dep
