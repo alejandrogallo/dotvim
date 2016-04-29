@@ -8,10 +8,13 @@ This is the manifest to implement a set of common snippets that should be applia
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | TYPES        |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
-| fun          | Simple function definition       | X    | X      |   |     | X          |         |      | X         |         |       |      |      |
+| fun          | Simple function definition       | X    |        |   |     |            |         |      |           |         |       |      |      |
+| lambda       | Lambda expression                |      |        |   |     |            |         |      |           |         |       |      |      |
+| class        | Class definition                 |      |        |   |     |            |         |      |           |         |       |      |      |
+| met          | Method of a class                |      |        |   |     |            |         |      |           |         |       |      |      |
+| attr         | attribute of a class             |      |        |   |     |            |         |      |           |         |       |      |      |
 | const        | Read-only variale                | X    |        |   |     |            |         |      |           |         |       |      |      |
 | macro        | C-like macro                     |      |        |   |     |            |         |      |           |         |       |      |      |
-| lambda       | Lambda expression                |      |        |   |     |            |         |      |           |         |       |      |      |
 | int          | Simple integer definition        | X    |        |   |     |            |         |      |           |         |       |      |      |
 | float        | Simple floating point definition |      |        |   |     |            |         |      |           |         |       |      |      |
 | char         | Character definition             | X    |        |   |     |            |         |      |           |         |       |      |      |
@@ -20,7 +23,6 @@ This is the manifest to implement a set of common snippets that should be applia
 | arr          | List of values                   | X    |        |   |     |            |         |      |           |         |       |      |      |
 | enum         | Enumeration definition           |      |        |   |     |            |         |      |           |         |       |      |      |
 | struct       | Structure                        |      |        |   |     |            |         |      |           |         |       |      |      |
-| class        | Class definition                 |      |        |   |     |            |         |      |           |         |       |      |      |
 | bin          | Binary numbers                   |      |        |   |     |            |         |      |           |         |       |      |      |
 | hex          | Hexadecimal numbers              |      |        |   |     |            |         |      |           |         |       |      |      |
 | bool         | Boolean variables                |      |        |   |     |            |         |      |           |         |       |      |      |
@@ -37,12 +39,15 @@ This is the manifest to implement a set of common snippets that should be applia
 | fori         | iterator, for smth in smwhr      | X    |        |   |     |            |         |      |           |         |       |      |      |
 | while        | While                            | X    |        |   |     |            |         |      |           |         |       |      |      |
 | until        | until                            | X    |        |   |     |            |         |      |           |         |       |      |      |
+| try          | Try / catch                      |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | UTILS        |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
+| new          | Instantiate object               |      |        |   |     |            |         |      |           |         |       |      |      |
 | pac          | Include some package             | X    |        |   |     |            |         |      |           |         |       |      |      |
-| so           | print to stdout                  | X    | X      |   | X   | X          |         |      | X         |         |       |      |      |
+| so           | print to stdout                  | X    |        |   |     |            |         |      |           |         |       |      |      |
 | serr         | print to stderr                  | X    |        |   |     |            |         |      |           |         |       |      |      |
+| sex          | Raise exception                  |      |        |   |     |            |         |      |           |         |       |      |      |
 | read         | stdin read                       | X    |        |   |     |            |         |      |           |         |       |      |      |
 | cd           | Change dir                       | X    |        |   |     |            |         |      |           |         |       |      |      |
 | sys          | Talk to the shell                |      |        |   |     |            |         |      |           |         |       |      |      |
@@ -54,8 +59,8 @@ This is the manifest to implement a set of common snippets that should be applia
 | fread        | File read                        |      |        |   |     |            |         |      |           |         |       |      |      |
 | exit         | Exit a program with status       | X    |        |   |     |            |         |      |           |         |       |      |      |
 | ret          | Return a value in function       | X    |        |   |     |            |         |      |           |         |       |      |      |
-| argc         | Get arguments number             |      | X      |   |     |            |         |      |           |         |       |      |      |
-| argvi        | Get ith argument                 |      | X      |   |     |            |         |      |           |         |       |      |      |
+| argc         | Get arguments number             | X    |        |   |     |            |         |      |           |         |       |      |      |
+| argvi        | Get ith argument                 | X    |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | CONSTANTS    |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
@@ -71,7 +76,7 @@ This is the manifest to implement a set of common snippets that should be applia
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | TEMPLATES    |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
-| argv parse   | Parse command line               |      | X      |   |     |            |         |      |           |         |       |      |      |
-| main         | Main template                    |      |        |   |     |            | X       |      |           |         |       |      |      |
+| argv parse   | Parse command line               |      |        |   |     |            |         |      |           |         |       |      |      |
+| main         | Main template                    |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 
