@@ -22,9 +22,9 @@ This is the manifest to implement a set of common snippets that should be applia
 | dic          | Relational array                 |      |        |   |     |            |         |      |           |         |       |      |      |
 | arr          | List of values                   | X    |        |   |     |            |         |      |           |         |       |      |      |
 | enum         | Enumeration definition           |      |        |   |     |            |         |      |           |         |       |      |      |
-| struct       | Structure                        |      |        |   |     |            |         |      |           |         |       |      |      |
+| struct       | Structure construct              |      |        |   |     |            |         |      |           |         |       |      |      |
 | bin          | Binary numbers                   |      |        |   |     |            |         |      |           |         |       |      |      |
-| hex          | Hexadecimal numbers              |      |        |   |     |            |         |      |           |         |       |      |      |
+| hex          | Hexadecimal numbers              | X    |        |   |     |            |         |      |           |         |       |      |      |
 | bool         | Boolean variables                |      |        |   |     |            |         |      |           |         |       |      |      |
 | name         | Namespace                        |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
