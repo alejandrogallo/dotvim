@@ -122,7 +122,21 @@ snippet serr "stderr" b
 echo ${1:${2:stuff}} >&2
 endsnippet
 
+snippet cd "Change directory" b
+cd ${1:folder}$0
+endsnippet
 
+snippet mkdir "Make directory" b
+mkdir -p ${1:/path/to/dir}
+endsnippet
+
+snippet exit "Exit function" b
+exit ${1:0}$0
+endsnippet
+
+snippet ret "Return statement" b
+return ${1:0}$0
+endsnippet
 
 
 #######################################################################
@@ -144,6 +158,14 @@ snippet ife "If else" b
 if ${2:[[ ${1:condition} ]]}; then
 	${0:#statements}
 fi
+endsnippet
+
+snippet ifsh "If branching" b
+if ${2:[[ ${1:condition} ]]}; then ${0:#statements} fi
+endsnippet
+
+snippet if3 "If branching" b
+${2:[[ ${1:condition} ]]} && ${3:success statements} || ${3:error statements}
 endsnippet
 
 snippet until "until ... (done)" b
@@ -171,3 +193,26 @@ done
 endsnippet
 
 
+
+#######################################################################
+#                              CONSTANTS                              #
+#######################################################################
+
+snippet true "True value" i
+0
+endsnippet
+snippet false "True value" i
+1
+endsnippet
+snippet and "and operator" i
+&&
+endsnippet
+snippet or "Or operator" i
+||
+endsnippet
+snippet bor "Bitwise or" i
+|
+endsnippet
+snippet band "Bitwise and" i
+&
+endsnippet
