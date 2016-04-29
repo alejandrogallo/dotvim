@@ -115,11 +115,15 @@ endsnippet
 #######################################################################
 
 snippet so "Stdout" b
-echo ${1:${2:stuff}}
+echo ${1:${2:stuff}}$0
 endsnippet
 
 snippet serr "stderr" b
-echo ${1:${2:stuff}} >&2
+echo ${1:${2:stuff}} >&2$0
+endsnippet
+
+snippet read "Stdin read" b
+read ${1:-p ${2:"Prompt message:"}} ${3:variable_name}$0
 endsnippet
 
 snippet cd "Change directory" b
@@ -127,7 +131,7 @@ cd ${1:folder}$0
 endsnippet
 
 snippet mkdir "Make directory" b
-mkdir -p ${1:/path/to/dir}
+mkdir -p ${1:/path/to/dir}$0
 endsnippet
 
 snippet exit "Exit function" b
@@ -137,6 +141,19 @@ endsnippet
 snippet ret "Return statement" b
 return ${1:0}$0
 endsnippet
+
+snippet pac "Import package" b
+source ${1:path/to/package.sh}$0
+endsnippet
+
+snippet argc "Get arguments number" i
+$#$0
+endsnippet
+
+snippet argvi "Get ith argument" i
+\$${1:i}$0
+endsnippet
+
 
 
 #######################################################################

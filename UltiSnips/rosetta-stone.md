@@ -18,23 +18,24 @@ This is the manifest to implement a set of common snippets that should be applia
 | int          | Simple integer definition        | X    |        |   |     |            |         |      |           |         |       |      |      |
 | float        | Simple floating point definition |      |        |   |     |            |         |      |           |         |       |      |      |
 | char         | Character definition             | X    |        |   |     |            |         |      |           |         |       |      |      |
-| string       | string definition                | X    |        |   |     |            |         |      |           |         |       |      |      |
-| dict         | Relational array                 |      |        |   |     |            |         |      |           |         |       |      |      |
-| array        | List of values                   | X    |        |   |     |            |         |      |           |         |       |      |      |
+| str          | string definition                | X    |        |   |     |            |         |      |           |         |       |      |      |
+| dic          | Relational array                 |      |        |   |     |            |         |      |           |         |       |      |      |
+| arr          | List of values                   | X    |        |   |     |            |         |      |           |         |       |      |      |
 | enum         | Enumeration definition           |      |        |   |     |            |         |      |           |         |       |      |      |
 | struct       | Structure                        |      |        |   |     |            |         |      |           |         |       |      |      |
 | class        | Class definition                 |      |        |   |     |            |         |      |           |         |       |      |      |
 | bin          | Binary numbers                   |      |        |   |     |            |         |      |           |         |       |      |      |
 | hex          | Hexadecimal numbers              |      |        |   |     |            |         |      |           |         |       |      |      |
 | bool         | Boolean variables                |      |        |   |     |            |         |      |           |         |       |      |      |
+| name         | Namespace                        |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | BRANCHING    |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | if           | If construct                     | X    |        |   |     |            |         |      |           |         |       |      |      |
 | ife          | If else construct                | X    |        |   |     |            |         |      |           |         |       |      |      |
 | elif         | elif                             | X    |        |   |     |            |         |      |           |         |       |      |      |
-| ifsh         | If construct, short form         | X     |        |   |     |            |         |      |           |         |       |      |      |
-| if3          | if construct tertiary form       | X     |        |   |     |            |         |      |           |         |       |      |      |
+| ifsh         | If construct, short form         | X    |        |   |     |            |         |      |           |         |       |      |      |
+| if3          | if construct tertiary form       | X    |        |   |     |            |         |      |           |         |       |      |      |
 | for          | for with index                   | X    |        |   |     |            |         |      |           |         |       |      |      |
 | fori         | iterator, for smth in smwhr      | X    |        |   |     |            |         |      |           |         |       |      |      |
 | while        | While                            | X    |        |   |     |            |         |      |           |         |       |      |      |
@@ -42,8 +43,10 @@ This is the manifest to implement a set of common snippets that should be applia
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | UTILS        |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
+| pac          | Include some package             | X    |        |   |     |            |         |      |           |         |       |      |      |
 | so           | print to stdout                  | X    | X      |   | X   | X          |         |      | X         |         |       |      |      |
 | serr         | print to stderr                  | X    |        |   |     |            |         |      |           |         |       |      |      |
+| read         | stdin read                       | X    |        |   |     |            |         |      |           |         |       |      |      |
 | cd           | Change dir                       | X    |        |   |     |            |         |      |           |         |       |      |      |
 | sys          | Talk to the shell                |      |        |   |     |            |         |      |           |         |       |      |      |
 | mkdir        | Create directory                 | X    |        |   |     |            |         |      |           |         |       |      |      |
@@ -54,6 +57,8 @@ This is the manifest to implement a set of common snippets that should be applia
 | fread        | File read                        |      |        |   |     |            |         |      |           |         |       |      |      |
 | exit         | Exit a program with status       | X    |        |   |     |            |         |      |           |         |       |      |      |
 | ret          | Return a value in function       | X    |        |   |     |            |         |      |           |         |       |      |      |
+| argc         | Get arguments number             |      | X      |   |     |            |         |      |           |         |       |      |      |
+| argvi        | Get ith argument                 |      | X      |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | CONSTANTS    |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
@@ -69,6 +74,6 @@ This is the manifest to implement a set of common snippets that should be applia
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | TEMPLATES    |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
-| argv parse   | Parse command line               | X    | X      |   |     |            |         |      |           |         |       |      |      |
+| argv parse   | Parse command line               |      | X      |   |     |            |         |      |           |         |       |      |      |
 | main         | Main template                    |      |        |   |     |            | X       |      |           |         |       |      |      |
 
