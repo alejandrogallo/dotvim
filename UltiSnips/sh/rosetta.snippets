@@ -108,6 +108,12 @@ declare -f -r function ${1:function_name}() {
 }
 endsnippet
 
+# hex
+########
+snippet hex "Hexadecimal digit" i
+$(echo -n -e "\\\\x${1:ff}")$0
+endsnippet
+
 
 
 #######################################################################
