@@ -12,15 +12,15 @@ This is the manifest to implement a set of common snippets that should be applia
 | TYPES        |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | fun          | Simple function definition       | X    | X      |   |     | X          |         |      | X         |         |       |      |      |
-| const        | Read-only variale                |      |        |   |     |            |         |      |           |         |       |      |      |
+| const        | Read-only variale                | X     |        |   |     |            |         |      |           |         |       |      |      |
 | macro        | C-like macro                     |      |        |   |     |            |         |      |           |         |       |      |      |
 | lambda       | Lambda expression                |      |        |   |     |            |         |      |           |         |       |      |      |
-| int          | Simple integer definition        |      |        |   |     |            |         |      |           |         |       |      |      |
+| int          | Simple integer definition        | X    |        |   |     |            |         |      |           |         |       |      |      |
 | float        | Simple floating point definition |      |        |   |     |            |         |      |           |         |       |      |      |
-| char         | Character definition             |      |        |   |     |            |         |      |           |         |       |      |      |
-| string       | string definition                |      |        |   |     |            |         |      |           |         |       |      |      |
+| char         | Character definition             | X     |        |   |     |            |         |      |           |         |       |      |      |
+| string       | string definition                | X     |        |   |     |            |         |      |           |         |       |      |      |
 | dict         | Relational array                 |      |        |   |     |            |         |      |           |         |       |      |      |
-| list         | List of values                   |      |        |   |     |            |         |      |           |         |       |      |      |
+| array         | List of values                   |X      |        |   |     |            |         |      |           |         |       |      |      |
 | enum         | Enumeration definition           |      |        |   |     |            |         |      |           |         |       |      |      |
 | struct       | Structure                        |      |        |   |     |            |         |      |           |         |       |      |      |
 | class        | Class definition                 |      |        |   |     |            |         |      |           |         |       |      |      |
@@ -28,7 +28,7 @@ This is the manifest to implement a set of common snippets that should be applia
 | UTILS        |                                  |      |        |   |     |            |         |      |           |         |       |      |      |
 |--------------+----------------------------------+------+--------+---+-----+------------+---------+------+-----------+---------+-------+------+------|
 | so           | print to stdout                  | X    | X      |   | X   | X          |         |      | X         |         |       |      |      |
-| serr         | print to stderr                  |      |        |   |     |            |         |      |           |         |       |      |      |
+| serr         | print to stderr                  | X     |        |   |     |            |         |      |           |         |       |      |      |
 | cd           | Change dir                       |      |        |   |     |            |         |      |           |         |       |      |      |
 | system       | Talk to the shell                |      |        |   |     |            |         |      |           |         |       |      |      |
 | mkdir        | Create directory                 |      |        |   |     |            |         |      |           |         |       |      |      |
@@ -47,6 +47,10 @@ This is the manifest to implement a set of common snippets that should be applia
 
 
 
-to add 
+to add
 binary number
-hex number 
+hex number
+branching = if ife if3 for fori while until
+
+types
+
