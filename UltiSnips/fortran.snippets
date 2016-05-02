@@ -18,19 +18,8 @@ $0
 END TYPE
 endsnippet
 
-
-snippet arr
-${1:TYPE}, ALLOCATABLE, DIMENSION(${2::}) :: $0
-endsnippet
-
-
 snippet intent
 ${1:TYPE}, INTENT(IN/OUT) :: $0
-endsnippet
-
-# Array
-snippet /
-(/ $1 /) ${2:,&} $0
 endsnippet
 
 snippet sub

@@ -308,6 +308,18 @@ nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 "Set tab to 2
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
+" Windowing configuration {{{1 "
+let g:WINDOW_IS_ZOOMED=0
+function! ToggleWindowZoom()
+  if g:WINDOW_IS_ZOOMED==1
+    exec "normal! \<C-w>="
+    let g:WINDOW_IS_ZOOMED=0
+  else
+    exec "normal! z400\<Cr>"
+    let g:WINDOW_IS_ZOOMED=1
+  endif
+endfunction
+
 " Text Formatting {{{1 "
 function! CreateRsTTitle(character)
   "This function creates a header of the rst type

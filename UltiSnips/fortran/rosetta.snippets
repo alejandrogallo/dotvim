@@ -1,4 +1,3 @@
-
 #######################################################################
 #                                TYPES                                #
 #######################################################################
@@ -74,14 +73,11 @@ endsnippet
 # arr
 ########
 
-snippet arr "Definition of arr type" b
-${1:variable_name}${2:=${3:(hello world array)}}
-endsnippet
-snippet tarr "Definition of arr type safely" b
-declare -a ${1:variable_name}${2:=${3:(hello world array)}}
+snippet arr
+${1:TYPE}, ALLOCATABLE, DIMENSION(${2::}) :: $0
 endsnippet
 snippet carr "Definition of constants of arr type" b
-declare -a -r ${1:variable_name}${2:=${3:(hello world array)}}
+${1:TYPE}, ALLOCATABLE, DIMENSION(${2::}), PARAMETER :: $0
 endsnippet
 
 
