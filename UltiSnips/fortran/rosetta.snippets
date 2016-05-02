@@ -11,7 +11,7 @@ endsnippet
 ########
 
 snippet int "Definition of int type" b
-INTEGER ${1:variable_name} :: ${2:=42}
+INTEGER :: ${1:variable_name} ${2:=42}
 endsnippet
 snippet cint "Definition of constants of int type" b
 INTEGER, PARAMETER :: ${1:variable_name} ${2:=42}
@@ -21,17 +21,17 @@ endsnippet
 ########
 
 snippet bool "Definition of bool type" b
-BOOL ${1:variable_name} :: ${2:=.TRUE.}
+LOGICAL :: ${1:variable_name} ${2:=.TRUE.}
 endsnippet
 snippet cbool "Definition of constants of bool type" b
-BOOL, PARAMETER :: ${1:variable_name} ${2:=.TRUE.}
+LOGICAL, PARAMETER :: ${1:variable_name} ${2:=.TRUE.}
 endsnippet
 
 # float
 ########
 
 snippet float "Definition of real type" b
-REAL ${1:variable_name} :: ${2:=42}
+REAL :: ${1:variable_name} ${2:=42}
 endsnippet
 snippet cfloat "Definition of constants of real type" b
 REAL, PARAMETER :: ${1:variable_name} ${2:=42}
@@ -51,7 +51,7 @@ endsnippet
 ########
 
 snippet str "Definition of str type" b
-CHARACTER(LEN=*) ${1:variable_name} :: ${2:="AAAAA"}
+CHARACTER(LEN=*) :: ${1:variable_name} ${2:="AAAAA"}
 endsnippet
 snippet cstr "Definition of constants of str type" b
 CHARACTER(LEN=*), PARAMETER :: ${1:variable_name} ${2:="AAAAAA"}
@@ -62,7 +62,7 @@ endsnippet
 ########
 
 snippet char "Definition of char type" b
-CHARACTER(LEN=1) ${1:variable_name} :: ${2:="A"}
+CHARACTER(LEN=1) :: ${1:variable_name} ${2:="A"}
 endsnippet
 snippet cchar "Definition of constants of char type" b
 CHARACTER(LEN=1), PARAMETER :: ${1:variable_name} ${2:="A"}
