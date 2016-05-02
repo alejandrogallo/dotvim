@@ -322,6 +322,7 @@ function! ToggleWindowZoom()
     let g:WINDOW_IS_ZOOMED=1
   endif
 endfunction
+nnoremap <C-w>f :call ToggleWindowZoom()<cr>
 
 " Text Formatting {{{1 "
 function! CreateRsTTitle(character)
