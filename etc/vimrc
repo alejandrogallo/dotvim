@@ -309,8 +309,11 @@ nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 " Windowing configuration {{{1 "
+
 let g:WINDOW_IS_ZOOMED=0
 function! ToggleWindowZoom()
+  "a very simple and stupid function to maximize some windows, it messes
+  "everything up, but I do not need much more for the moment
   if g:WINDOW_IS_ZOOMED==1
     exec "normal! \<C-w>="
     let g:WINDOW_IS_ZOOMED=0
