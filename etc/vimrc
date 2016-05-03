@@ -189,6 +189,7 @@ endfunction
 command! -nargs=* Greplace call GrepAndReplace(<f-args>)
 
 
+
 " Leader and localleader {{{1 "
 
 "Set maplocalleader to something else if you like
@@ -411,6 +412,9 @@ function! FindInCtagsVisualSelection()
   normal! tag visual_string
 endfunction
 vnoremap <localleader>t :normal! :call FindInCtagsVisualSelection()<cr>
+
+" Go to definition of something
+nnoremap <F1> <C-]>
 
 
 
