@@ -195,6 +195,8 @@ nnoremap <localleader>q :q<cr>
 "/ is way too far away, and I want case insensitive!
 nnoremap <localleader>f /\c
 nnoremap <localleader>F ?\c
+vnoremap <localleader>f /\c
+vnoremap <localleader>F ?\c
 
 " too complicated to replace
 nnoremap <localleader>r :%s/
@@ -217,7 +219,6 @@ nnoremap <localleader>B :edit $DOTFILES/link/bashrc<cr>
 
 " align stuff for =
 vnoremap <localleader>t :Tabularize /
-
 
 " paste adding a blank space
 nnoremap <localleader>p :normal! a <ESC>p
