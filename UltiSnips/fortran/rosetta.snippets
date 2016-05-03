@@ -210,11 +210,13 @@ endsnippet
 	#${0:#statements}
 #endsnippet
 
-#snippet ife "If else" b
-#if ${2:[[ ${1:condition} ]]}; then
-	#${0:#statements}
-#fi
-#endsnippet
+snippet ife "If else" b
+IF (${1:CONDITION}) THEN
+	$2
+ELSE
+	$3
+END IF
+endsnippet
 
 #snippet ifsh "If branching" b
 #if ${2:[[ ${1:condition} ]]}; then ${0:#statements} fi
