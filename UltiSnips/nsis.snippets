@@ -1,5 +1,5 @@
 snippet do:Version "Information" b
- 
+
 VIProductVersion "${1:0}.${2:0}.${3:0}.${4:0}"
 VIFileVersion		"${1:0}.${2:0}.${3:0}.${4:0}"
 VIAddVersionKey	"FileDescription"	"${5:description}"
@@ -14,12 +14,12 @@ VIAddVersionKey	"CompanyName"			"${13:company_name}"
 VIAddVersionKey	"InternalName"		 "${14:internal_name}"
 VIAddVersionKey	"PrivateBuild"		 "${15:private_build}"
 VIAddVersionKey	"SpecialBuild"		 "${16:special_build}"
- 
+
 endsnippet
 
 
 snippet do:Help "Dialog" b
- 
+
 \${GetParameters} \$${1:var}
 
 \${If}	 \$${1} == "/?"
@@ -33,19 +33,19 @@ snippet do:Help "Dialog" b
 \${OrIf} \$${1} == "help"
 	${2:# your help dialog}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IllegalFileCharacters "" b
- 
+
 !define ILLEGAL_CHARS "\$\\"\$*/:<>?\|"
- 
+
 endsnippet
 
 
 snippet do:IsNT..Else "" b
- 
+
 \${If} \${IsNT}
 
 	${1:# your NT code here}
@@ -55,23 +55,23 @@ snippet do:IsNT..Else "" b
 	${2:# your non-NT code here}
 
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsNT "" b
- 
+
 \${If} \${IsNT}
 
 	${1:# your code here}
 
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsRunningX64..Else "" b
- 
+
 \${If} \${IsRunningX64}
 
 	${1:# your 64-bit code here}
@@ -81,23 +81,23 @@ snippet do:IsRunningX64..Else "" b
 	${2:# your 32-bit code here}
 
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsRunningX64 "" b
- 
+
 \${If} \${IsRunningX64}
 
 	${1:# your code here}
 
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServer..Else "" b
- 
+
 \${If} \${IsServer}
 
 	${1:# your server code here}
@@ -107,23 +107,23 @@ snippet do:IsServer..Else "" b
 	${2:# your non-server code here}
 
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServer "" b
- 
+
 \${If} \${IsServer}
 
 	${1:# your code here}
 
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServicePack "(Windows 2000)" b
- 
+
 \${If} \${IsWin2000}
 	\${If} \${IsServicePack} 0
 
@@ -147,12 +147,12 @@ snippet do:IsServicePack "(Windows 2000)" b
 
 	\${EndIf}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServicePack "(Windows 7)" b
- 
+
 \${If} \${IsWin7}
 	\${If} \${IsServicePack} 0
 
@@ -164,12 +164,12 @@ snippet do:IsServicePack "(Windows 7)" b
 
 	\${EndIf}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServicePack "(Windows NT4)" b
- 
+
 \${If} \${IsWinNT4}
 	\${If} \${IsServicePack} 0
 
@@ -205,12 +205,12 @@ snippet do:IsServicePack "(Windows NT4)" b
 
 	\${EndIf}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServicePack "(Windows Server 2003)" b
- 
+
 \${If} \${IsWin2003}
 	\${If} \${IsServicePack} 0
 
@@ -226,12 +226,12 @@ snippet do:IsServicePack "(Windows Server 2003)" b
 
 	\${EndIf}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServicePack "(Windows Server 2008)" b
- 
+
 \${If} \${IsWin2008}
 	\${If} \${IsServicePack} 0
 
@@ -247,12 +247,12 @@ snippet do:IsServicePack "(Windows Server 2008)" b
 
 	\${EndIf}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServicePack "(Windows Vista)" b
- 
+
 \${If} \${IsWinVista}
 	\${If} \${IsServicePack} 0
 
@@ -268,12 +268,12 @@ snippet do:IsServicePack "(Windows Vista)" b
 
 	\${EndIf}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:IsServicePack "(Windows XP)" b
- 
+
 \${If} \${IsWinXP}
 	\${If} \${IsServicePack} 0
 
@@ -293,15 +293,15 @@ snippet do:IsServicePack "(Windows XP)" b
 
 	\${EndIf}
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet do:Language "Dialog (Africa)" b
- 
+
 Push ""
 
-# first language will be default 
+# first language will be default
 Push \${LANG_ENGLISH}
 Push "English"
 
@@ -327,15 +327,15 @@ LangDLL::LangDialog "${1:Program Language}" "${2:Please select a language for th
 Pop \$LANGUAGE
 StrCmp \$LANGUAGE "cancel" 0 +2
 Abort
- 
+
 endsnippet
 
 
 snippet do:Language "Dialog (Americas)" b
- 
+
 Push ""
 
-# first language will be default 
+# first language will be default
 Push \${LANG_ENGLISH}
 Push "English"
 
@@ -358,15 +358,15 @@ LangDLL::LangDialog "${1:Program Language}" "${2:Please select a language for th
 Pop \$LANGUAGE
 StrCmp \$LANGUAGE "cancel" 0 +2
 Abort
- 
+
 endsnippet
 
 
 snippet do:Language "Dialog (Asia)" b
- 
+
 Push ""
 
-# first language will be default 
+# first language will be default
 Push \${LANG_ENGLISH}
 Push "English"
 
@@ -434,15 +434,15 @@ LangDLL::LangDialog "${1:Program Language}" "${2:Please select a language for th
 Pop \$LANGUAGE
 StrCmp \$LANGUAGE "cancel" 0 +2
 Abort
- 
+
 endsnippet
 
 
 snippet do:Language "Dialog (East-Asia)" b
- 
+
 Push ""
 
-# first language will be default 
+# first language will be default
 Push \${LANG_ENGLISH}
 Push "English"
 
@@ -482,15 +482,15 @@ LangDLL::LangDialog "${1:Program Language}" "${2:Please select a language for th
 Pop \$LANGUAGE
 StrCmp \$LANGUAGE "cancel" 0 +2
 Abort
- 
+
 endsnippet
 
 
 snippet do:Language "Dialog (Europe)" b
- 
+
 Push ""
 
-# first language will be default 
+# first language will be default
 Push \${LANG_ENGLISH}
 Push "English"
 
@@ -630,15 +630,15 @@ LangDLL::LangDialog "${1:Program Language}" "${2:Please select a language for th
 Pop \$LANGUAGE
 StrCmp \$LANGUAGE "cancel" 0 +2
 Abort
- 
+
 endsnippet
 
 
 snippet do:Language "Dialog" b
- 
+
 Push ""
 
-# first language will be default 
+# first language will be default
 Push \${LANG_ENGLISH}
 Push "English"
 
@@ -840,15 +840,15 @@ LangDLL::LangDialog "${1:Program Language}" "${2:Please select a language for th
 Pop \$LANGUAGE
 StrCmp \$LANGUAGE "cancel" 0 +2
 Abort
- 
+
 endsnippet
 
 
 snippet do:Language "Dialog (Worldwide)" b
- 
+
 Push ""
 
-# first language will be default 
+# first language will be default
 Push \${LANG_ENGLISH}
 Push "English"
 
@@ -1045,12 +1045,12 @@ LangDLL::LangDialog "${1:Program Language}" "${2:Please select a language for th
 Pop \$LANGUAGE
 StrCmp \$LANGUAGE "cancel" 0 +2
 Abort
- 
+
 endsnippet
 
 
 snippet do:Library "function" b
- 
+
 !define funcName "${1:function_name}"
 
 !macro ${1:funcName}Call ${2:_PARAM} ${3:_RESULT}
@@ -1074,76 +1074,76 @@ snippet do:Library "function" b
 !macro ${1:funcName}_
 		!verbose push
 		!verbose ${_${1/(.*)/\U\1/}_VERBOSE
-		
+
 		${7:# your code}
 
 		!verbose pop
 !macroend
- 
+
 endsnippet
 
 
 snippet do:nsDialogs "Function" b
- 
+
 Function "${1:function}"
 	nsDialogs::Create /NOUNLOAD 1018
 	Pop \$${2:page_dialog}
 
 	StrCmp \$${2:page_dialog} "error" 0 +2
 	Abort
-	
+
 	nsDialogs::Show
 FunctionEnd
- 
+
 endsnippet
 
 
 snippet do:nsDialogs "ChangeFilerequest" b
- 
+
 
 \${NSD_CreateFileRequest} ${1:x} ${2:y} ${3:width} ${4:height} "${5:text}"
 Pop \$${6:filerequest_dialog}
-	
+
 \${NSD_OnChange} \$${6:filerequest_dialog} ${7:filerequest_function}
- 
+
 endsnippet
 
 
 snippet do:nsDialogs "onChangePassword" b
- 
+
 
 \${NSD_Password} ${1:x} ${2:y} ${3:width} ${4:height} "${5:text}""
 Pop \$${6:password_dialog}
-	
+
 \${NSD_OnChange} \$${6:password_dialog} ${7:password_function}
- 
+
 endsnippet
 
 
 snippet do:nsDialogs "onChangeText" b
- 
+
 
 \${NSD_CreateText} ${1:x} ${2:y} ${3:width} ${4:height} "${5:text}""
 Pop \$${6:text_dialog}
-	
+
 \${NSD_OnChange} \$${6:text_dialog} ${7:text_function}
- 
+
 endsnippet
 
 
 snippet do:nsDialogs "ClickButton" b
- 
+
 \${NSD_CreateButton} ${1:x} ${2:y} ${3:width} ${4:height} "${5:text}"
 Pop \$${6:button_variable}
-		
+
 GetFunctionAddress \$0 ${7:click_function}
 nsDialogs::OnClick /NOUNLOAD \$${6:button_variable} $0
- 
+
 endsnippet
 
 
 snippet do:UAC "Init Macro" b
- 
+
 !macro Init thing
 	uac_tryagain:
 	!insertmacro UAC_RunElevated
@@ -1165,15 +1165,15 @@ snippet do:UAC "Init Macro" b
 		MessageBox MB_ICONSTOP|mb_TopMost|MB_SETFOREGROUND "${4:Unable to elevate, error \$0}"
 		Quit
 	\${EndSwitch}
-	 
+
 	SetShellVarContext all
 !macroend
- 
+
 endsnippet
 
 
 snippet do:VersionCompare "" b
- 
+
 \${VersionCompare} "${1:version1}" "${2:version2}" \$${3:result}
 
 \${If} \$${3} = 0 # is equal
@@ -1189,12 +1189,12 @@ snippet do:VersionCompare "" b
 	${6:# your code here}
 
 \${EndIf}
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script (2 Sections, onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1232,12 +1232,12 @@ Function .onInit
 FunctionEnd
 
 $13
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script (2 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1269,12 +1269,12 @@ SectionEnd
 
 ; Functions --------------------------------
 $12
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script (3 Sections, onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1318,12 +1318,12 @@ Function .onInit
 FunctionEnd
 
 $16
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script (3 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1361,12 +1361,12 @@ SectionEnd
 
 ; Functions --------------------------------
 $15
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script (4 Sections, onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1416,12 +1416,12 @@ Function .onInit
 FunctionEnd
 
 $19
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script (4 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1465,12 +1465,12 @@ SectionEnd
 
 ; Functions --------------------------------
 $18
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script (onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1502,12 +1502,12 @@ Function .onInit
 FunctionEnd
 
 $10
- 
+
 endsnippet
 
 
 snippet scaffold:Basic "Script" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1533,12 +1533,12 @@ SectionEnd
 
 ; Functions --------------------------------
 $9
- 
+
 endsnippet
 
 
 snippet scaffold:InstallOptions "" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1567,10 +1567,10 @@ SectionEnd
 
 ; Functions --------------------------------
 Function .onInit
-	
+
 	InitPluginsDir
 	File "/oname=\$PLUGINSDIR\\${9:ioFile}.ini" "${5}.ini"
-	
+
 FunctionEnd
 
 Function "${6}"
@@ -1578,7 +1578,7 @@ Function "${6}"
  	Push \$R0
 	InstallOptions::dialog "\$PLUGINSDIR\\${9}.ini"
 		Pop \$R0
-	
+
 	Pop \$R0
 
 FunctionEnd
@@ -1588,12 +1588,12 @@ Function "${7}"
  	${10:# your code here}
 
 FunctionEnd
- 
+
 endsnippet
 
 
 snippet scaffold:Library "v2" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 !define libName "${1:library_name}"
@@ -1646,19 +1646,19 @@ snippet scaffold:Library "v2" b
 		!macro ${2:funcName}_
 				!verbose push
 				!verbose ${_${1/(.*)/\U\1/}_VERBOSE
-				
+
 				${7:# your code}
 
 				!verbose pop
 		!macroend
 
 !endif
- 
+
 endsnippet
 
 
 snippet scaffold:Library "v3" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 !define libName "${1:library_name}"
@@ -1705,19 +1705,19 @@ snippet scaffold:Library "v3" b
 		!macro ${2:funcName}_
 				!verbose push
 				!verbose ${_${1/(.*)/\U\1/}_VERBOSE
-				
+
 				${7:# your code}
 
 				!verbose pop
 		!macroend
 
 !endif
- 
+
 endsnippet
 
 
 snippet scaffold:Minimal "Script" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Settings ---------------------------------
@@ -1738,12 +1738,12 @@ SectionEnd
 
 ; Functions --------------------------------
 $7
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "(2 Sections, onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -1756,7 +1756,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -1793,12 +1793,12 @@ Function .onInit
 FunctionEnd
 
 $15
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "(2 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -1811,7 +1811,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -1842,12 +1842,12 @@ LangString DESC_${10} \${LANG_${5/(.*)/\U\1/}} "${13:section2_description}"
 
 ; Functions --------------------------------
 $14
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "(3 Sections, onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -1860,7 +1860,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -1905,12 +1905,12 @@ Function .onInit
 FunctionEnd
 
 $19
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "(3 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -1923,7 +1923,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -1962,12 +1962,12 @@ LangString DESC_${13} \${LANG_${5/(.*)/\U\1/}} "${17:section3_description}"
 
 ; Functions --------------------------------
 $18
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "(4 Sections, onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -1980,7 +1980,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2033,12 +2033,12 @@ Function .onInit
 FunctionEnd
 
 $23
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "(4 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2051,7 +2051,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2098,12 +2098,12 @@ LangString DESC_${16} \${LANG_${5/(.*)/\U\1/}} "${21:section4_description}"
 
 ; Functions --------------------------------
 $22
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "(onInit)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2116,7 +2116,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2145,12 +2145,12 @@ Function .onInit
 FunctionEnd
 
 $11
- 
+
 endsnippet
 
 
 snippet scaffold:ModernUI "" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2163,7 +2163,7 @@ RequestExecutionLevel ${3:user}
 InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2186,12 +2186,12 @@ LangString DESC_${7} \${LANG_${5/(.*)/\U\1/}} "${9:section_description}"
 
 ; Functions --------------------------------
 $10
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "ModernUI (2 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2207,7 +2207,7 @@ InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
 Page custom "${5:nsdialog_page}" "${6:${5:nsdialog_page}_validation}"
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2256,12 +2256,12 @@ LangString DESC_${15} \${LANG_${8/(.*)/\U\1/}} "${18:section_description}"
 	!insertmacro MUI_DESCRIPTION_TEXT \${${12}} \$(DESC_${12})
 	!insertmacro MUI_DESCRIPTION_TEXT \${${15}} \$(DESC_${15})
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "ModernUI (3 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2277,7 +2277,7 @@ InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
 Page custom "${5:nsdialog_page}" "${6:${5:nsdialog_page}_validation}"
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2334,12 +2334,12 @@ LangString DESC_${18} \${LANG_${8/(.*)/\U\1/}} "${22:section_description}"
 	!insertmacro MUI_DESCRIPTION_TEXT \${${15}} \$(DESC_${15})
 	!insertmacro MUI_DESCRIPTION_TEXT \${${18}} \$(DESC_${18})
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "ModernUI (4 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2355,7 +2355,7 @@ InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
 Page custom "${5:nsdialog_page}" "${6:${5:nsdialog_page}_validation}"
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2419,12 +2419,12 @@ LangString DESC_${21} \${LANG_${8/(.*)/\U\1/}} "${26:section_description}"
 	!insertmacro MUI_DESCRIPTION_TEXT \${${15}} \$(DESC_${15})
 	!insertmacro MUI_DESCRIPTION_TEXT \${${18}} \$(DESC_${18})
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "ModernUI" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2440,7 +2440,7 @@ InstallDir "\$PROGRAMFILES\\${4:${1}}"
 
 ; Pages ------------------------------------
 Page custom "${5:nsdialog_page}" "${6:${5:nsdialog_page}_validation}"
-!insertmacro MUI_PAGE_COMPONENTS 
+!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 
@@ -2481,12 +2481,12 @@ LangString DESC_${12} \${LANG_${8/(.*)/\U\1/}} "${14:section_description}"
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
 	!insertmacro MUI_DESCRIPTION_TEXT \${${12}} \$(DESC_${12})
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "(2 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2538,12 +2538,12 @@ Section "${13:section2}" ${14:${13/(.*)/\U\1/}_INDEX}
 	${15:# your code here}
 
 SectionEnd
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "(3 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2601,12 +2601,12 @@ Section "${16:section3}" ${17:${16/(.*)/\U\1/}_INDEX}
 	${18:# your code here}
 
 SectionEnd
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "(4 Sections)" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2670,12 +2670,12 @@ Section "${19:section4}" ${18:${19/(.*)/\U\1/}_INDEX}
 	${21:# your code here}
 
 SectionEnd
- 
+
 endsnippet
 
 
 snippet scaffold:nsDialogs "" b
- 
+
 ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
 
 ; Includes ---------------------------------
@@ -2721,12 +2721,12 @@ Section "${10:section}" ${11:${10/(.*)/\U\1/}_INDEX}
 	${12:# your code here}
 
 SectionEnd
- 
+
 endsnippet
 
 
 snippet scaffold:Translate "MUI (French)" b
- 
+
 !insertmacro LANGFILE "${1:French}" "${1:Français}"
 
 !ifdef MUI_WELCOMEPAGE
@@ -2823,7 +2823,7 @@ snippet scaffold:Translate "MUI (French)" b
 	\${LangFileString} MUI_TEXT_FINISH_REBOOTLATER "${51:Je souhaite redémarrer moi-même plus tard}"
 	\${LangFileString} MUI_TEXT_FINISH_RUN "${52:Lancer \$(^NameDA)}"
 	\${LangFileString} MUI_TEXT_FINISH_SHOWREADME "${53:Afficher le fichier Readme}"
-	\${LangFileString} MUI_BUTTONTEXT_FINISH "${54:&Fermer}"	
+	\${LangFileString} MUI_BUTTONTEXT_FINISH "${54:&Fermer}"
 !endif
 
 !ifdef MUI_STARTMENUPAGE
@@ -2853,12 +2853,12 @@ snippet scaffold:Translate "MUI (French)" b
 	\${LangFileString} MULTIUSER_INNERTEXT_INSTALLMODE_ALLUSERS "${66:Installer pour tous les utilisateurs}"
 	\${LangFileString} MULTIUSER_INNERTEXT_INSTALLMODE_CURRENTUSER "${67:Installer seulement pour moi}"
 !endif
- 
+
 endsnippet
 
 
 snippet scaffold:Translate "MUI (Spanish)" b
- 
+
 !insertmacro LANGFILE "${1:Spanish}" "${1:Español}"
 
 !ifdef MUI_WELCOMEPAGE
@@ -2955,7 +2955,7 @@ snippet scaffold:Translate "MUI (Spanish)" b
 	\${LangFileString} MUI_TEXT_FINISH_REBOOTLATER "${51:Deseo reiniciar manualmente más tarde}"
 	\${LangFileString} MUI_TEXT_FINISH_RUN "${52:&Ejecutar \$(^NameDA)}"
 	\${LangFileString} MUI_TEXT_FINISH_SHOWREADME "${53:&Ver Léame}"
-	\${LangFileString} MUI_BUTTONTEXT_FINISH "${54:&Terminar}"	
+	\${LangFileString} MUI_BUTTONTEXT_FINISH "${54:&Terminar}"
 !endif
 
 !ifdef MUI_STARTMENUPAGE
@@ -2986,12 +2986,12 @@ snippet scaffold:Translate "MUI (Spanish)" b
 	\${LangFileString} MULTIUSER_INNERTEXT_INSTALLMODE_ALLUSERS "${66:Instación para cualquier usuario de este ordenador}"
 	\${LangFileString} MULTIUSER_INNERTEXT_INSTALLMODE_CURRENTUSER "${67:Instalación solo para mí}"
 !endif
- 
+
 endsnippet
 
 
 snippet scaffold:Translate "MUI" b
- 
+
 !insertmacro LANGFILE "${1:English}" "${1:English}"
 
 !ifdef MUI_WELCOMEPAGE
@@ -3088,7 +3088,7 @@ snippet scaffold:Translate "MUI" b
 	\${LangFileString} MUI_TEXT_FINISH_REBOOTLATER "${51:I want to manually reboot later}"
 	\${LangFileString} MUI_TEXT_FINISH_RUN "${52:&Run \$(^NameDA)}"
 	\${LangFileString} MUI_TEXT_FINISH_SHOWREADME "${53:&Show Readme}"
-	\${LangFileString} MUI_BUTTONTEXT_FINISH "${54:&Finish}"	
+	\${LangFileString} MUI_BUTTONTEXT_FINISH "${54:&Finish}"
 !endif
 
 !ifdef MUI_STARTMENUPAGE
@@ -3118,7 +3118,7 @@ snippet scaffold:Translate "MUI" b
 	\${LangFileString} MULTIUSER_INNERTEXT_INSTALLMODE_ALLUSERS "${66:Install for anyone using this computer}"
 	\${LangFileString} MULTIUSER_INNERTEXT_INSTALLMODE_CURRENTUSER "${67:Install just for me}"
 !endif
- 
+
 endsnippet
 
 
