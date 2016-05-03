@@ -415,6 +415,10 @@ vnoremap <localleader>t :normal! :call FindInCtagsVisualSelection()<cr>
 
 " Go to definition of something
 nnoremap <F1> <C-]>
+" Get back from definition
+nnoremap <F2> <C-t>
+" Get back plus delete buffer
+nnoremap <F3> :bd<cr>
 
 
 
