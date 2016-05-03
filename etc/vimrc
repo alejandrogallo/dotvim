@@ -54,6 +54,18 @@ call vundle#end()
 
 " GENERAL STUFF {{{1 "
 
+function! s:get_visual_selection()
+  " Why is this not a built-in Vim script function?!
+  " from
+  " http://stackoverflow.com/questions/1533565/how-to-get-visually-selected-text-in-vimscript
+  let [lnum1, col1] = getpos("'<")[1:2]
+  let [lnum2, col2] = getpos("'>")[1:2]
+  let lines = getline(lnum1, lnum2)
+  let lines[-1] = lines[-1][: col2 - (&selection == 'inclusive' ? 1 : 2)]
+  let lines[0] = lines[0][col1 - 1:]
+  return join(lines, "\n")
+endfunction
+
 function! TabReplace()
   %s/\t/  /g
 endfunction
@@ -389,6 +401,16 @@ nnoremap <localleader>Q :CtrlPTag<cr>
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
+
+
+
+" Ctags {{{1 "
+"TODO :
+function! FindInCtagsVisualSelection()
+  let visual_string = s:get_visual_selection()
+  normal! tag visual_string
+endfunction
+vnoremap <localleader>t :normal! :call FindInCtagsVisualSelection()<cr>
 
 
 
