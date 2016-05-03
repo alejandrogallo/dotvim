@@ -318,7 +318,10 @@ function! ToggleWindowZoom()
     exec "normal! \<C-w>="
     let g:WINDOW_IS_ZOOMED=0
   else
-    exec "normal! z400\<Cr>"
+    "Resize height
+    exec ":resize 400"
+    "Resize width
+    exec ":vertical resize 400"
     let g:WINDOW_IS_ZOOMED=1
   endif
 endfunction
