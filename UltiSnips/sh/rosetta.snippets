@@ -179,6 +179,8 @@ endsnippet
 
 snippet ife "If else" b
 if ${2:[[ ${1:condition} ]]}; then
+	${3:#statements}
+else
 	${0:#statements}
 fi
 endsnippet
@@ -226,6 +228,9 @@ snippet true "True value" i
 endsnippet
 snippet false "True value" i
 1
+endsnippet
+snippet not "not operator" i
+!
 endsnippet
 snippet and "and operator" i
 &&
