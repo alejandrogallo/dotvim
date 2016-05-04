@@ -12,7 +12,9 @@ if ! exists("NO_SPARTAN")
   Plugin 'bling/vim-airline'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic'
-  Plugin 'jlanzarotta/bufexplorer'
+  if v:version >= 730
+    Plugin 'jlanzarotta/bufexplorer'
+  endif
 endif
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'othree/html5.vim'
