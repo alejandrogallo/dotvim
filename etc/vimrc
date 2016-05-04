@@ -329,6 +329,11 @@ nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 " Windowing configuration {{{1 "
 
+"split vertically like in i3
+nnoremap <localleader><cr> :vsp<cr>
+"split horizontally like in i3
+nnoremap <localleader><localleader><cr> :sp<cr>
+
 let g:WINDOW_IS_ZOOMED=0
 function! ToggleWindowZoom()
   "a very simple and stupid function to maximize some windows, it messes
