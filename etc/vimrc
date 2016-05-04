@@ -419,6 +419,8 @@ function! FindInCtagsVisualSelection()
 endfunction
 vnoremap <localleader>t :normal! :call FindInCtagsVisualSelection()<cr>
 
+" Set default tags filename as 'tags' 
+set tags=tags
 " Go to definition of something
 nnoremap <F1> <C-]>
 " Get back from definition
