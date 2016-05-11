@@ -11,6 +11,7 @@ if ! exists("NO_SPARTAN")
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'bling/vim-airline'
   Plugin 'scrooloose/nerdtree'
+  Plugin 'vim-scripts/VCard-syntax'
   Plugin 'scrooloose/syntastic'
   if v:version >= 730
     Plugin 'jlanzarotta/bufexplorer'
@@ -241,7 +242,7 @@ nnoremap <localleader>B :edit $DOTFILES/link/bashrc<cr>
 vnoremap <localleader>t :Tabularize /
 
 " paste adding a blank space
-nnoremap <localleader>p :normal! a <ESC>p
+"nnoremap <localleader>p :normal! a <ESC>p " For cnext now 
 
 
 
@@ -252,8 +253,8 @@ nnoremap <localleader>zmi :set foldmethod=indent<cr>
 " Quickfix stff {{{1 "
 
 " remap ccnext and cprevious, nice for grep, make etc...
-nnoremap <localleader>cn :cnext<cr>
-nnoremap <localleader>cp :cprevious<cr>
+nnoremap <localleader>n :cnext<cr>
+nnoremap <localleader>p :cprevious<cr>
 
 " Buffer control {{{1 "
 
