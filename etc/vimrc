@@ -11,6 +11,7 @@ if ! exists("NO_SPARTAN")
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'bling/vim-airline'
   Plugin 'scrooloose/nerdtree'
+  Plugin 'vim-scripts/VCard-syntax'
   Plugin 'scrooloose/syntastic'
   if v:version >= 730
     Plugin 'jlanzarotta/bufexplorer'
