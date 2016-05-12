@@ -2,3 +2,4 @@ bundle
 **/*.swp
 etc/undo
 /**/profile.log
+/init.vim
