@@ -152,12 +152,6 @@ if !has("unix")
   set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe\ -executionpolicy\ bypass
 endif
 
-" Spelling {{{1 "
-
-"English as a default languages, needless to say
-"it is the default language of vim
-set spelllang=en_gb
-
 " GrepAndReplace {{{1 "
 
 function! GrepAndReplace(word, ...)
@@ -509,6 +503,16 @@ else
   color default
   set background=dark
 endif
+
+
+" Spelling {{{1 "
+
+"English as a default languages, needless to say
+"it is the default language of vim
+set spelllang=en_gb
+" This should be after the color theme
+hi clear SpellBad
+hi SpellBad guibg=#ff2929 ctermbg=160
 
 
 " Configuration file edit options {{{1
