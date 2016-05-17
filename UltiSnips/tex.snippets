@@ -250,3 +250,14 @@ endsnippet
 
 
 
+############
+#  Bibtex  #
+############
+snippet bibtex "Initialise bibtex" b
+\usepackage[backend=bibtex]{biblatex} %backend tells biblatex what you will be using to process the bibliography file
+\bibliography{${1:file_name(without extension)}}
+endsnippet
+snippet bibtex-add "Insert bibtex document in latex document" b
+\bibliographystyle{abbrv}
+\bibliography{${1:file_name(without extension)}}
+endsnippet
