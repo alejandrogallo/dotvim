@@ -420,19 +420,6 @@ nnoremap <localleader>gu :Gpull
 
 
 
-"  Terminal configuration  {{{1"
-
-if &term ==# "xterm"
-  " Sometimes when environment variable TERM is only set
-  " to xterm, I have problems with colors, so I try to
-  " force 256 colors and not only 8
-  let &term = "xterm-256color"
-elseif &term ==# "screen"
-  let &t_Co = 256
-elseif &term ==# "linux"
-  let &t_Co = 256
-endif
-
 
 "  CtrlP  {{{1"
 
@@ -495,14 +482,31 @@ nnoremap <localleader>ts :SyntasticToggleMode<cr>
 
 "  Color theme  {{{1"
 
+if &term ==# "xterm"
+  " Sometimes when environment variable TERM is only set
+  " to xterm, I have problems with colors, so I try to
+  " force 256 colors and not only 8
+  let &term = "xterm-256color"
+elseif &term ==# "screen"
+  let &t_Co = 256
+elseif &term ==# "linux"
+  let &t_Co = 8
+endif
+
 if has("unix")
-  let g:solarized_termcolors=256
-  colorscheme solarized
-  set background=dark
+  if &term=="linux"
+    color default
+    set background=dark
+  else
+    let g:solarized_termcolors=256
+    colorscheme solarized
+    set background=dark
+  endif
 else
   color default
   set background=dark
 endif
+
 
 
 " Spelling {{{1 "
