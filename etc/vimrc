@@ -99,9 +99,6 @@ set nocompatible
 inoremap kj <ESC>
 vnoremap kj <ESC>
 
-" map : to -
-noremap - :
-
 filetype plugin on
 "Autocompletion from vim
 
