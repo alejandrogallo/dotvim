@@ -1,3 +1,11 @@
+# WARNING #
+
+THIS REPOSITORY IS DEPRECATED.
+I joint all my dotfiles together into one great unified
+dotfiles repository, check it out [here](http://github.com/alejandrogallo/dotfiles),
+maybe it is specially interesting because of the snippets.
+
+
 # DOTVIM #
 
 This is my .vim folder. There are many like it, but this one is mine.
